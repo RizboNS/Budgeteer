@@ -128,7 +128,7 @@
             this.categoryMenuPanel.Controls.Add(this.categoryMenuUtilBtn);
             this.categoryMenuPanel.Location = new System.Drawing.Point(295, 259);
             this.categoryMenuPanel.Name = "categoryMenuPanel";
-            this.categoryMenuPanel.Size = new System.Drawing.Size(100, 225);
+            this.categoryMenuPanel.Size = new System.Drawing.Size(100, 212);
             this.categoryMenuPanel.TabIndex = 9;
             this.categoryMenuPanel.Visible = false;
             // 
