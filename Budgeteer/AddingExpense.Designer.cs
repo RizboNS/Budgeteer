@@ -96,6 +96,8 @@
             // 
             // SubmitBtn
             // 
+            this.SubmitBtn.FlatAppearance.BorderSize = 0;
+            this.SubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitBtn.Location = new System.Drawing.Point(202, 410);
             this.SubmitBtn.Name = "SubmitBtn";
             this.SubmitBtn.Size = new System.Drawing.Size(366, 23);
