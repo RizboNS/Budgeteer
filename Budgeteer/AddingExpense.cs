@@ -18,6 +18,14 @@ namespace Budgeteer
         public AddingExpense()
         {
             InitializeComponent();
+            SetMyCustomFormat();
+        }
+        public void SetMyCustomFormat()
+        {
+            // Set the Format type and the CustomFormat string.
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.CustomFormat = "MMMM/yyyy";
+            dateTimePicker.ShowUpDown = true;
         }
         private Expense DisplayExpenseAddedAndReturnExpenseObj()
         {

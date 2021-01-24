@@ -36,15 +36,15 @@
             this.SubmitBtn = new System.Windows.Forms.Button();
             this.statusLbl = new System.Windows.Forms.Label();
             this.categoryMenuPanel = new System.Windows.Forms.Panel();
-            this.categoryMenuBtn = new System.Windows.Forms.Button();
-            this.categoryMenuUtilBtn = new System.Windows.Forms.Button();
-            this.categoryMenuFoodBtn = new System.Windows.Forms.Button();
-            this.categoryMenuWardrobeBtn = new System.Windows.Forms.Button();
-            this.categoryMenuTransportationBtn = new System.Windows.Forms.Button();
-            this.categoryMenuNonEssentialsBtn = new System.Windows.Forms.Button();
-            this.categoryMenuKidsBtn = new System.Windows.Forms.Button();
-            this.categoryMenuCareProductsBtn = new System.Windows.Forms.Button();
             this.categoryMenuNotListed = new System.Windows.Forms.Button();
+            this.categoryMenuCareProductsBtn = new System.Windows.Forms.Button();
+            this.categoryMenuKidsBtn = new System.Windows.Forms.Button();
+            this.categoryMenuNonEssentialsBtn = new System.Windows.Forms.Button();
+            this.categoryMenuTransportationBtn = new System.Windows.Forms.Button();
+            this.categoryMenuWardrobeBtn = new System.Windows.Forms.Button();
+            this.categoryMenuFoodBtn = new System.Windows.Forms.Button();
+            this.categoryMenuUtilBtn = new System.Windows.Forms.Button();
+            this.categoryMenuBtn = new System.Windows.Forms.Button();
             this.categoryMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,9 +92,10 @@
             this.dateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
             this.dateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
             this.dateTimePicker.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
+            this.dateTimePicker.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker.Location = new System.Drawing.Point(443, 155);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker.TabIndex = 6;
             // 
             // SubmitBtn
@@ -137,110 +138,20 @@
             this.categoryMenuPanel.TabIndex = 9;
             this.categoryMenuPanel.Visible = false;
             // 
-            // categoryMenuBtn
+            // categoryMenuNotListed
             // 
-            this.categoryMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuBtn.FlatAppearance.BorderSize = 0;
-            this.categoryMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuBtn.Location = new System.Drawing.Point(295, 236);
-            this.categoryMenuBtn.Name = "categoryMenuBtn";
-            this.categoryMenuBtn.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuBtn.TabIndex = 10;
-            this.categoryMenuBtn.Text = "Category";
-            this.categoryMenuBtn.UseVisualStyleBackColor = false;
-            this.categoryMenuBtn.Click += new System.EventHandler(this.categoryMenuBtn_Click);
-            // 
-            // categoryMenuUtilBtn
-            // 
-            this.categoryMenuUtilBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuUtilBtn.FlatAppearance.BorderSize = 0;
-            this.categoryMenuUtilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuUtilBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuUtilBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuUtilBtn.Location = new System.Drawing.Point(0, 0);
-            this.categoryMenuUtilBtn.Name = "categoryMenuUtilBtn";
-            this.categoryMenuUtilBtn.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuUtilBtn.TabIndex = 11;
-            this.categoryMenuUtilBtn.Text = "Utility";
-            this.categoryMenuUtilBtn.UseVisualStyleBackColor = false;
-            this.categoryMenuUtilBtn.Click += new System.EventHandler(this.categoryMenuUtilBtn_Click);
-            // 
-            // categoryMenuFoodBtn
-            // 
-            this.categoryMenuFoodBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuFoodBtn.FlatAppearance.BorderSize = 0;
-            this.categoryMenuFoodBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuFoodBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuFoodBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuFoodBtn.Location = new System.Drawing.Point(0, 26);
-            this.categoryMenuFoodBtn.Name = "categoryMenuFoodBtn";
-            this.categoryMenuFoodBtn.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuFoodBtn.TabIndex = 12;
-            this.categoryMenuFoodBtn.Text = "Food";
-            this.categoryMenuFoodBtn.UseVisualStyleBackColor = false;
-            this.categoryMenuFoodBtn.Click += new System.EventHandler(this.categoryMenuFoodBtn_Click);
-            // 
-            // categoryMenuWardrobeBtn
-            // 
-            this.categoryMenuWardrobeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuWardrobeBtn.FlatAppearance.BorderSize = 0;
-            this.categoryMenuWardrobeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuWardrobeBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuWardrobeBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuWardrobeBtn.Location = new System.Drawing.Point(0, 52);
-            this.categoryMenuWardrobeBtn.Name = "categoryMenuWardrobeBtn";
-            this.categoryMenuWardrobeBtn.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuWardrobeBtn.TabIndex = 13;
-            this.categoryMenuWardrobeBtn.Text = "Wardrobe";
-            this.categoryMenuWardrobeBtn.UseVisualStyleBackColor = false;
-            this.categoryMenuWardrobeBtn.Click += new System.EventHandler(this.categoryMenuWardrobeBtn_Click);
-            // 
-            // categoryMenuTransportationBtn
-            // 
-            this.categoryMenuTransportationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuTransportationBtn.FlatAppearance.BorderSize = 0;
-            this.categoryMenuTransportationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuTransportationBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuTransportationBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuTransportationBtn.Location = new System.Drawing.Point(0, 104);
-            this.categoryMenuTransportationBtn.Name = "categoryMenuTransportationBtn";
-            this.categoryMenuTransportationBtn.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuTransportationBtn.TabIndex = 14;
-            this.categoryMenuTransportationBtn.Text = "Transportation";
-            this.categoryMenuTransportationBtn.UseVisualStyleBackColor = false;
-            this.categoryMenuTransportationBtn.Click += new System.EventHandler(this.categoryMenuTransportationBtn_Click);
-            // 
-            // categoryMenuNonEssentialsBtn
-            // 
-            this.categoryMenuNonEssentialsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuNonEssentialsBtn.FlatAppearance.BorderSize = 0;
-            this.categoryMenuNonEssentialsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuNonEssentialsBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuNonEssentialsBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuNonEssentialsBtn.Location = new System.Drawing.Point(0, 130);
-            this.categoryMenuNonEssentialsBtn.Name = "categoryMenuNonEssentialsBtn";
-            this.categoryMenuNonEssentialsBtn.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuNonEssentialsBtn.TabIndex = 15;
-            this.categoryMenuNonEssentialsBtn.Text = "Non essentials";
-            this.categoryMenuNonEssentialsBtn.UseVisualStyleBackColor = false;
-            this.categoryMenuNonEssentialsBtn.Click += new System.EventHandler(this.categoryMenuNonEssentialsBtn_Click);
-            // 
-            // categoryMenuKidsBtn
-            // 
-            this.categoryMenuKidsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuKidsBtn.FlatAppearance.BorderSize = 0;
-            this.categoryMenuKidsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuKidsBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuKidsBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuKidsBtn.Location = new System.Drawing.Point(0, 78);
-            this.categoryMenuKidsBtn.Name = "categoryMenuKidsBtn";
-            this.categoryMenuKidsBtn.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuKidsBtn.TabIndex = 16;
-            this.categoryMenuKidsBtn.Text = "Kids";
-            this.categoryMenuKidsBtn.UseVisualStyleBackColor = false;
-            this.categoryMenuKidsBtn.Click += new System.EventHandler(this.categoryMenuKidsBtn_Click);
+            this.categoryMenuNotListed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.categoryMenuNotListed.FlatAppearance.BorderSize = 0;
+            this.categoryMenuNotListed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoryMenuNotListed.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryMenuNotListed.ForeColor = System.Drawing.Color.White;
+            this.categoryMenuNotListed.Location = new System.Drawing.Point(0, 179);
+            this.categoryMenuNotListed.Name = "categoryMenuNotListed";
+            this.categoryMenuNotListed.Size = new System.Drawing.Size(100, 26);
+            this.categoryMenuNotListed.TabIndex = 18;
+            this.categoryMenuNotListed.Text = "Not Listed";
+            this.categoryMenuNotListed.UseVisualStyleBackColor = false;
+            this.categoryMenuNotListed.Click += new System.EventHandler(this.categoryMenuNotListed_Click);
             // 
             // categoryMenuCareProductsBtn
             // 
@@ -257,20 +168,110 @@
             this.categoryMenuCareProductsBtn.UseVisualStyleBackColor = false;
             this.categoryMenuCareProductsBtn.Click += new System.EventHandler(this.categoryMenuCareProductsBtn_Click);
             // 
-            // categoryMenuNotListed
+            // categoryMenuKidsBtn
             // 
-            this.categoryMenuNotListed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuNotListed.FlatAppearance.BorderSize = 0;
-            this.categoryMenuNotListed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuNotListed.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuNotListed.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuNotListed.Location = new System.Drawing.Point(0, 179);
-            this.categoryMenuNotListed.Name = "categoryMenuNotListed";
-            this.categoryMenuNotListed.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuNotListed.TabIndex = 18;
-            this.categoryMenuNotListed.Text = "Not Listed";
-            this.categoryMenuNotListed.UseVisualStyleBackColor = false;
-            this.categoryMenuNotListed.Click += new System.EventHandler(this.categoryMenuNotListed_Click);
+            this.categoryMenuKidsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.categoryMenuKidsBtn.FlatAppearance.BorderSize = 0;
+            this.categoryMenuKidsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoryMenuKidsBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryMenuKidsBtn.ForeColor = System.Drawing.Color.White;
+            this.categoryMenuKidsBtn.Location = new System.Drawing.Point(0, 78);
+            this.categoryMenuKidsBtn.Name = "categoryMenuKidsBtn";
+            this.categoryMenuKidsBtn.Size = new System.Drawing.Size(100, 26);
+            this.categoryMenuKidsBtn.TabIndex = 16;
+            this.categoryMenuKidsBtn.Text = "Kids";
+            this.categoryMenuKidsBtn.UseVisualStyleBackColor = false;
+            this.categoryMenuKidsBtn.Click += new System.EventHandler(this.categoryMenuKidsBtn_Click);
+            // 
+            // categoryMenuNonEssentialsBtn
+            // 
+            this.categoryMenuNonEssentialsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.categoryMenuNonEssentialsBtn.FlatAppearance.BorderSize = 0;
+            this.categoryMenuNonEssentialsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoryMenuNonEssentialsBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryMenuNonEssentialsBtn.ForeColor = System.Drawing.Color.White;
+            this.categoryMenuNonEssentialsBtn.Location = new System.Drawing.Point(0, 130);
+            this.categoryMenuNonEssentialsBtn.Name = "categoryMenuNonEssentialsBtn";
+            this.categoryMenuNonEssentialsBtn.Size = new System.Drawing.Size(100, 26);
+            this.categoryMenuNonEssentialsBtn.TabIndex = 15;
+            this.categoryMenuNonEssentialsBtn.Text = "Non essentials";
+            this.categoryMenuNonEssentialsBtn.UseVisualStyleBackColor = false;
+            this.categoryMenuNonEssentialsBtn.Click += new System.EventHandler(this.categoryMenuNonEssentialsBtn_Click);
+            // 
+            // categoryMenuTransportationBtn
+            // 
+            this.categoryMenuTransportationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.categoryMenuTransportationBtn.FlatAppearance.BorderSize = 0;
+            this.categoryMenuTransportationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoryMenuTransportationBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryMenuTransportationBtn.ForeColor = System.Drawing.Color.White;
+            this.categoryMenuTransportationBtn.Location = new System.Drawing.Point(0, 104);
+            this.categoryMenuTransportationBtn.Name = "categoryMenuTransportationBtn";
+            this.categoryMenuTransportationBtn.Size = new System.Drawing.Size(100, 26);
+            this.categoryMenuTransportationBtn.TabIndex = 14;
+            this.categoryMenuTransportationBtn.Text = "Transportation";
+            this.categoryMenuTransportationBtn.UseVisualStyleBackColor = false;
+            this.categoryMenuTransportationBtn.Click += new System.EventHandler(this.categoryMenuTransportationBtn_Click);
+            // 
+            // categoryMenuWardrobeBtn
+            // 
+            this.categoryMenuWardrobeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.categoryMenuWardrobeBtn.FlatAppearance.BorderSize = 0;
+            this.categoryMenuWardrobeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoryMenuWardrobeBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryMenuWardrobeBtn.ForeColor = System.Drawing.Color.White;
+            this.categoryMenuWardrobeBtn.Location = new System.Drawing.Point(0, 52);
+            this.categoryMenuWardrobeBtn.Name = "categoryMenuWardrobeBtn";
+            this.categoryMenuWardrobeBtn.Size = new System.Drawing.Size(100, 26);
+            this.categoryMenuWardrobeBtn.TabIndex = 13;
+            this.categoryMenuWardrobeBtn.Text = "Wardrobe";
+            this.categoryMenuWardrobeBtn.UseVisualStyleBackColor = false;
+            this.categoryMenuWardrobeBtn.Click += new System.EventHandler(this.categoryMenuWardrobeBtn_Click);
+            // 
+            // categoryMenuFoodBtn
+            // 
+            this.categoryMenuFoodBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.categoryMenuFoodBtn.FlatAppearance.BorderSize = 0;
+            this.categoryMenuFoodBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoryMenuFoodBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryMenuFoodBtn.ForeColor = System.Drawing.Color.White;
+            this.categoryMenuFoodBtn.Location = new System.Drawing.Point(0, 26);
+            this.categoryMenuFoodBtn.Name = "categoryMenuFoodBtn";
+            this.categoryMenuFoodBtn.Size = new System.Drawing.Size(100, 26);
+            this.categoryMenuFoodBtn.TabIndex = 12;
+            this.categoryMenuFoodBtn.Text = "Food";
+            this.categoryMenuFoodBtn.UseVisualStyleBackColor = false;
+            this.categoryMenuFoodBtn.Click += new System.EventHandler(this.categoryMenuFoodBtn_Click);
+            // 
+            // categoryMenuUtilBtn
+            // 
+            this.categoryMenuUtilBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.categoryMenuUtilBtn.FlatAppearance.BorderSize = 0;
+            this.categoryMenuUtilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoryMenuUtilBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryMenuUtilBtn.ForeColor = System.Drawing.Color.White;
+            this.categoryMenuUtilBtn.Location = new System.Drawing.Point(0, 0);
+            this.categoryMenuUtilBtn.Name = "categoryMenuUtilBtn";
+            this.categoryMenuUtilBtn.Size = new System.Drawing.Size(100, 26);
+            this.categoryMenuUtilBtn.TabIndex = 11;
+            this.categoryMenuUtilBtn.Text = "Utility";
+            this.categoryMenuUtilBtn.UseVisualStyleBackColor = false;
+            this.categoryMenuUtilBtn.Click += new System.EventHandler(this.categoryMenuUtilBtn_Click);
+            // 
+            // categoryMenuBtn
+            // 
+            this.categoryMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.categoryMenuBtn.FlatAppearance.BorderSize = 0;
+            this.categoryMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoryMenuBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryMenuBtn.ForeColor = System.Drawing.Color.White;
+            this.categoryMenuBtn.Location = new System.Drawing.Point(295, 236);
+            this.categoryMenuBtn.Name = "categoryMenuBtn";
+            this.categoryMenuBtn.Size = new System.Drawing.Size(100, 26);
+            this.categoryMenuBtn.TabIndex = 10;
+            this.categoryMenuBtn.Text = "Category";
+            this.categoryMenuBtn.UseVisualStyleBackColor = false;
+            this.categoryMenuBtn.Click += new System.EventHandler(this.categoryMenuBtn_Click);
             // 
             // AddingExpense
             // 
