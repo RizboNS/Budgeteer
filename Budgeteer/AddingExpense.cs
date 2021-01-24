@@ -21,7 +21,7 @@ namespace Budgeteer
         {
             // Creating Expense object and Displaying added string to the user.
             Expense expense = new Expense();
-            expense.amount = Convert.ToDouble(amountTxt.Text);
+            expense.amount = Convert.ToDouble(amountTxt.Text); // Need to add error mechanism
             expense.article = articleTxt.Text;
             expense.month = dateTimePicker.Value.Date.ToString("MMMM");
             expense.year = dateTimePicker.Value.Date.ToString("yyyy");
@@ -30,6 +30,8 @@ namespace Budgeteer
         }
         private void ClearInputBoxes()
         {
+            // Clear boxes so it is ready for next input.
+            // TO DO implement choice so article and category remains saved, didn't clear time so it gets saved.
             amountTxt.Clear();
             articleTxt.Clear();
             categoryTxt.Clear();
