@@ -15,10 +15,20 @@ namespace Budgeteer
     public partial class AddingExpense : UserControl
     {
         private string category = "Not Listed";
+        private List<string> listBoxValues = new List<string>();
         public AddingExpense()
         {
             InitializeComponent();
             SetMyCustomFormat();
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                SubmitBtn.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
         public void SetMyCustomFormat()
         {
@@ -36,20 +46,27 @@ namespace Budgeteer
             expense.month = dateTimePicker.Value.Date.ToString("MMMM");
             expense.year = dateTimePicker.Value.Date.ToString("yyyy");
             expense.category = category;
-            statusLbl.Text = $"Expense added {expense.FullExpense}";
+
+            listBoxValues.Add(expense.FullExpense);
+            listBoxAddedValues.DataSource = null;
+            listBoxAddedValues.DataSource = listBoxValues;
+
             return expense;
         }
         private void ClearInputBoxes()
         {
             // Clear boxes so it is ready for next input.
-            // TO DO implement choice so article and category remains saved, didn't clear time so it gets saved.
             amountTxt.Clear();
             articleTxt.Clear();
+            quantityTxtBox.Text = "1";
         }
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
             // Saving to the DB and Displaying added obj to the user.
-            SqliteDataAccess.SaveExpence(DisplayExpenseAddedAndReturnExpenseObj());
+            for (int i = 0; i < Convert.ToInt32(quantityTxtBox.Text); i++)
+            {
+                SqliteDataAccess.SaveExpence(DisplayExpenseAddedAndReturnExpenseObj());
+            }
             ClearInputBoxes();
         }
         private void CategoryMenuOnOff()

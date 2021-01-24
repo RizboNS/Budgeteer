@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SubmitBtn = new System.Windows.Forms.Button();
-            this.statusLbl = new System.Windows.Forms.Label();
             this.categoryMenuPanel = new System.Windows.Forms.Panel();
             this.categoryMenuNotListed = new System.Windows.Forms.Button();
             this.categoryMenuCareProductsBtn = new System.Windows.Forms.Button();
@@ -45,6 +44,9 @@
             this.categoryMenuFoodBtn = new System.Windows.Forms.Button();
             this.categoryMenuUtilBtn = new System.Windows.Forms.Button();
             this.categoryMenuBtn = new System.Windows.Forms.Button();
+            this.listBoxAddedValues = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.quantityTxtBox = new System.Windows.Forms.TextBox();
             this.categoryMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(295, 178);
+            this.label1.Location = new System.Drawing.Point(401, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 16);
             this.label1.TabIndex = 3;
@@ -80,7 +82,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(295, 217);
+            this.label2.Location = new System.Drawing.Point(401, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 4;
@@ -93,9 +95,9 @@
             this.dateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
             this.dateTimePicker.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
             this.dateTimePicker.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(443, 155);
+            this.dateTimePicker.Location = new System.Drawing.Point(295, 119);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker.Size = new System.Drawing.Size(154, 21);
             this.dateTimePicker.TabIndex = 6;
             // 
             // SubmitBtn
@@ -105,21 +107,13 @@
             this.SubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.SubmitBtn.Location = new System.Drawing.Point(401, 336);
+            this.SubmitBtn.Location = new System.Drawing.Point(532, 236);
             this.SubmitBtn.Name = "SubmitBtn";
-            this.SubmitBtn.Size = new System.Drawing.Size(260, 39);
+            this.SubmitBtn.Size = new System.Drawing.Size(160, 39);
             this.SubmitBtn.TabIndex = 7;
             this.SubmitBtn.Text = "Submit Expense";
             this.SubmitBtn.UseVisualStyleBackColor = false;
             this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
-            // 
-            // statusLbl
-            // 
-            this.statusLbl.AutoSize = true;
-            this.statusLbl.Location = new System.Drawing.Point(295, 307);
-            this.statusLbl.Name = "statusLbl";
-            this.statusLbl.Size = new System.Drawing.Size(0, 13);
-            this.statusLbl.TabIndex = 8;
             // 
             // categoryMenuPanel
             // 
@@ -273,14 +267,44 @@
             this.categoryMenuBtn.UseVisualStyleBackColor = false;
             this.categoryMenuBtn.Click += new System.EventHandler(this.categoryMenuBtn_Click);
             // 
+            // listBoxAddedValues
+            // 
+            this.listBoxAddedValues.FormattingEnabled = true;
+            this.listBoxAddedValues.Location = new System.Drawing.Point(295, 291);
+            this.listBoxAddedValues.Name = "listBoxAddedValues";
+            this.listBoxAddedValues.Size = new System.Drawing.Size(397, 238);
+            this.listBoxAddedValues.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(455, 238);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Quantity";
+            // 
+            // quantityTxtBox
+            // 
+            this.quantityTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
+            this.quantityTxtBox.Location = new System.Drawing.Point(419, 236);
+            this.quantityTxtBox.Name = "quantityTxtBox";
+            this.quantityTxtBox.Size = new System.Drawing.Size(30, 20);
+            this.quantityTxtBox.TabIndex = 12;
+            this.quantityTxtBox.Text = "1";
+            // 
             // AddingExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
-            this.Controls.Add(this.categoryMenuBtn);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.quantityTxtBox);
             this.Controls.Add(this.categoryMenuPanel);
-            this.Controls.Add(this.statusLbl);
+            this.Controls.Add(this.listBoxAddedValues);
+            this.Controls.Add(this.categoryMenuBtn);
             this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label2);
@@ -303,7 +327,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Button SubmitBtn;
-        private System.Windows.Forms.Label statusLbl;
         private System.Windows.Forms.Panel categoryMenuPanel;
         private System.Windows.Forms.Button categoryMenuCareProductsBtn;
         private System.Windows.Forms.Button categoryMenuKidsBtn;
@@ -314,5 +337,8 @@
         private System.Windows.Forms.Button categoryMenuUtilBtn;
         private System.Windows.Forms.Button categoryMenuBtn;
         private System.Windows.Forms.Button categoryMenuNotListed;
+        private System.Windows.Forms.ListBox listBoxAddedValues;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox quantityTxtBox;
     }
 }
