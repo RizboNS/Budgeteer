@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Budgeteer.Classes.Expense;
 
 namespace Budgeteer
 {
@@ -15,6 +16,18 @@ namespace Budgeteer
         public AddingExpense()
         {
             InitializeComponent();
+        }
+
+        private void SubmitBtn_Click(object sender, EventArgs e)
+        {
+            Expense expense = new Expense();
+            expense.amount = Convert.ToDouble(amountTxt.Text);
+            expense.article = articleTxt.Text;
+            expense.month = dateTimePicker.Value.Month.ToString("MM");
+            expense.year = dateTimePicker.Value.Year.ToString("yy");
+            expense.category = categoryTxt.Text;
+
+            statusLbl.Text = expense.FullExpense;
         }
     }
 }

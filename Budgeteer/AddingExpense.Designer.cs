@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.amountTxt = new System.Windows.Forms.TextBox();
+            this.articleTxt = new System.Windows.Forms.TextBox();
+            this.categoryTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.SubmitBtn = new System.Windows.Forms.Button();
             this.statusLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // amountTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.amountTxt.Location = new System.Drawing.Point(158, 135);
+            this.amountTxt.Name = "amountTxt";
+            this.amountTxt.Size = new System.Drawing.Size(100, 20);
+            this.amountTxt.TabIndex = 0;
             // 
-            // textBox2
+            // articleTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(158, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.articleTxt.Location = new System.Drawing.Point(158, 192);
+            this.articleTxt.Name = "articleTxt";
+            this.articleTxt.Size = new System.Drawing.Size(100, 20);
+            this.articleTxt.TabIndex = 1;
             // 
-            // textBox3
+            // categoryTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(158, 242);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.categoryTxt.Location = new System.Drawing.Point(158, 242);
+            this.categoryTxt.Name = "categoryTxt";
+            this.categoryTxt.Size = new System.Drawing.Size(100, 20);
+            this.categoryTxt.TabIndex = 2;
             // 
             // label1
             // 
@@ -87,21 +87,22 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Category";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(324, 192);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker.Location = new System.Drawing.Point(324, 192);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker.TabIndex = 6;
             // 
-            // button1
+            // SubmitBtn
             // 
-            this.button1.Location = new System.Drawing.Point(158, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(366, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SubmitBtn.Location = new System.Drawing.Point(158, 411);
+            this.SubmitBtn.Name = "SubmitBtn";
+            this.SubmitBtn.Size = new System.Drawing.Size(366, 23);
+            this.SubmitBtn.TabIndex = 7;
+            this.SubmitBtn.Text = "Submit Expense";
+            this.SubmitBtn.UseVisualStyleBackColor = true;
+            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // statusLbl
             // 
@@ -111,20 +112,20 @@
             this.statusLbl.Size = new System.Drawing.Size(0, 13);
             this.statusLbl.TabIndex = 8;
             // 
-            // UserControl1
+            // AddingExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.statusLbl);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.SubmitBtn);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "UserControl1";
+            this.Controls.Add(this.categoryTxt);
+            this.Controls.Add(this.articleTxt);
+            this.Controls.Add(this.amountTxt);
+            this.Name = "AddingExpense";
             this.Size = new System.Drawing.Size(636, 601);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,14 +134,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox amountTxt;
+        private System.Windows.Forms.TextBox articleTxt;
+        private System.Windows.Forms.TextBox categoryTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.Button SubmitBtn;
         private System.Windows.Forms.Label statusLbl;
     }
 }
