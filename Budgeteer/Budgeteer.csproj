@@ -71,6 +71,12 @@
     <Compile Include="AddingExpense.Designer.cs">
       <DependentUpon>AddingExpense.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewBy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewBy.Designer.cs">
+      <DependentUpon>ViewBy.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +95,9 @@
     <Content Include="DB\Expense.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="ViewBy.resx">
+      <DependentUpon>ViewBy.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DB\Expense.db-journal" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
