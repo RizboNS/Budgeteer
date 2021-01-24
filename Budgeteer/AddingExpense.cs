@@ -17,17 +17,27 @@ namespace Budgeteer
         {
             InitializeComponent();
         }
-
-        private void SubmitBtn_Click(object sender, EventArgs e)
+        private void DisplayExpenseAdded()
         {
+            // Creating Expense object and Displaying added string to the user.
             Expense expense = new Expense();
             expense.amount = Convert.ToDouble(amountTxt.Text);
             expense.article = articleTxt.Text;
             expense.month = dateTimePicker.Value.Date.ToString("MMMM");
             expense.year = dateTimePicker.Value.Date.ToString("yyyy");
             expense.category = categoryTxt.Text;
-
-            statusLbl.Text = expense.FullExpense;
+            statusLbl.Text = $"Expense added {expense.FullExpense}";
+        }
+        private void ClearInputBoxes()
+        {
+            amountTxt.Clear();
+            articleTxt.Clear();
+            categoryTxt.Clear();
+        }
+        private void SubmitBtn_Click(object sender, EventArgs e)
+        {
+            DisplayExpenseAdded();
+            ClearInputBoxes();
         }
 
     }
