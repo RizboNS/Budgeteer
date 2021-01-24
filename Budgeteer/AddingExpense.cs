@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Budgeteer.Classes.Expense;
+using Budgeteer.Classes.SqliteDataAccess;
 
 namespace Budgeteer
 {
@@ -17,7 +18,7 @@ namespace Budgeteer
         {
             InitializeComponent();
         }
-        private void DisplayExpenseAdded()
+        private Expense DisplayExpenseAddedAndReturnExpenseObj()
         {
             // Creating Expense object and Displaying added string to the user.
             Expense expense = new Expense();
@@ -27,6 +28,7 @@ namespace Budgeteer
             expense.year = dateTimePicker.Value.Date.ToString("yyyy");
             expense.category = categoryTxt.Text;
             statusLbl.Text = $"Expense added {expense.FullExpense}";
+            return expense;
         }
         private void ClearInputBoxes()
         {
@@ -38,7 +40,8 @@ namespace Budgeteer
         }
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
-            DisplayExpenseAdded();
+            // Saving to the DB and Displaying added obj to the user.
+            SqliteDataAccess.SaveExpence(DisplayExpenseAddedAndReturnExpenseObj());
             ClearInputBoxes();
         }
 
