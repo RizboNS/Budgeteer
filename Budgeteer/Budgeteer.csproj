@@ -76,6 +76,8 @@
     <EmbeddedResource Include="AddingExpense.resx">
       <DependentUpon>AddingExpense.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DB\Expense.db" />
+    <None Include="DB\Expense.db-journal" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
