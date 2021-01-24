@@ -18,7 +18,7 @@ namespace Budgeteer.Classes.Expense
         {
             get
             {
-                return $"Amount: {amount}, Month: {year}, Year {year}, Article {article}, Category: {category} .";
+                return $"Amount: {amount}, Month: {month}, Year {year}, Article {article}, Category: {category} .";
             }
         }
     }

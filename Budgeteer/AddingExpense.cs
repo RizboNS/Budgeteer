@@ -23,11 +23,12 @@ namespace Budgeteer
             Expense expense = new Expense();
             expense.amount = Convert.ToDouble(amountTxt.Text);
             expense.article = articleTxt.Text;
-            expense.month = dateTimePicker.Value.Month.ToString("MM");
-            expense.year = dateTimePicker.Value.Year.ToString("yy");
+            expense.month = dateTimePicker.Value.Date.ToString("MMMM");
+            expense.year = dateTimePicker.Value.Date.ToString("yyyy");
             expense.category = categoryTxt.Text;
 
             statusLbl.Text = expense.FullExpense;
         }
+
     }
 }
