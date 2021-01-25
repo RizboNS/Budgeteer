@@ -19,23 +19,17 @@ namespace Budgeteer
         {
             InitializeComponent();
         }
-        private void loadFullTable()
+
+        private void loadDataToDGV()
         {
             displayList = SqliteDataAccess.LoadExpence();
-            loadDataToListBox(displayList, textBox1);
-        }
-
-        private void loadDataToListBox(List<Expense> list, TextBox listBox)
-        {
-            foreach (var item in list)
-            {
-                listBox.AppendText(item.FullExpense + "\n");
-            }
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = displayList;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            loadFullTable();
+            loadDataToDGV();
         }
     }
 }
