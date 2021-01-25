@@ -109,6 +109,7 @@
             this.addingExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.addingExpense.AutoScroll = true;
             this.addingExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
             this.addingExpense.Location = new System.Drawing.Point(-4, 79);
             this.addingExpense.Margin = new System.Windows.Forms.Padding(4);

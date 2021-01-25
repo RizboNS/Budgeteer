@@ -137,5 +137,10 @@ namespace Budgeteer
             setCategory("Not Listed");
             CategoryMenuOnOff();
         }
+
+        private void testBtn_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(testBtn, new Point(0, testBtn.Height));
+        }
     }
 }

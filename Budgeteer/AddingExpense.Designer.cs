@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.amountTxt = new System.Windows.Forms.TextBox();
             this.articleTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,13 +48,20 @@
             this.listBoxAddedValues = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.quantityTxtBox = new System.Windows.Forms.TextBox();
+            this.testBtn = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryMenuPanel.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // amountTxt
             // 
             this.amountTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
-            this.amountTxt.Location = new System.Drawing.Point(295, 155);
+            this.amountTxt.Location = new System.Drawing.Point(379, 156);
             this.amountTxt.Name = "amountTxt";
             this.amountTxt.Size = new System.Drawing.Size(100, 20);
             this.amountTxt.TabIndex = 0;
@@ -61,7 +69,7 @@
             // articleTxt
             // 
             this.articleTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
-            this.articleTxt.Location = new System.Drawing.Point(295, 194);
+            this.articleTxt.Location = new System.Drawing.Point(379, 195);
             this.articleTxt.Name = "articleTxt";
             this.articleTxt.Size = new System.Drawing.Size(100, 20);
             this.articleTxt.TabIndex = 1;
@@ -71,7 +79,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(401, 157);
+            this.label1.Location = new System.Drawing.Point(485, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 16);
             this.label1.TabIndex = 3;
@@ -82,7 +90,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(401, 198);
+            this.label2.Location = new System.Drawing.Point(485, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 4;
@@ -95,7 +103,7 @@
             this.dateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
             this.dateTimePicker.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
             this.dateTimePicker.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(295, 119);
+            this.dateTimePicker.Location = new System.Drawing.Point(379, 120);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(154, 21);
             this.dateTimePicker.TabIndex = 6;
@@ -107,7 +115,7 @@
             this.SubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.SubmitBtn.Location = new System.Drawing.Point(532, 236);
+            this.SubmitBtn.Location = new System.Drawing.Point(616, 237);
             this.SubmitBtn.Name = "SubmitBtn";
             this.SubmitBtn.Size = new System.Drawing.Size(160, 39);
             this.SubmitBtn.TabIndex = 7;
@@ -126,7 +134,7 @@
             this.categoryMenuPanel.Controls.Add(this.categoryMenuWardrobeBtn);
             this.categoryMenuPanel.Controls.Add(this.categoryMenuFoodBtn);
             this.categoryMenuPanel.Controls.Add(this.categoryMenuUtilBtn);
-            this.categoryMenuPanel.Location = new System.Drawing.Point(295, 259);
+            this.categoryMenuPanel.Location = new System.Drawing.Point(379, 260);
             this.categoryMenuPanel.Name = "categoryMenuPanel";
             this.categoryMenuPanel.Size = new System.Drawing.Size(100, 212);
             this.categoryMenuPanel.TabIndex = 9;
@@ -259,7 +267,7 @@
             this.categoryMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categoryMenuBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuBtn.Location = new System.Drawing.Point(295, 236);
+            this.categoryMenuBtn.Location = new System.Drawing.Point(379, 237);
             this.categoryMenuBtn.Name = "categoryMenuBtn";
             this.categoryMenuBtn.Size = new System.Drawing.Size(100, 26);
             this.categoryMenuBtn.TabIndex = 10;
@@ -270,9 +278,9 @@
             // listBoxAddedValues
             // 
             this.listBoxAddedValues.FormattingEnabled = true;
-            this.listBoxAddedValues.Location = new System.Drawing.Point(295, 291);
+            this.listBoxAddedValues.Location = new System.Drawing.Point(379, 292);
             this.listBoxAddedValues.Name = "listBoxAddedValues";
-            this.listBoxAddedValues.Size = new System.Drawing.Size(397, 238);
+            this.listBoxAddedValues.Size = new System.Drawing.Size(397, 212);
             this.listBoxAddedValues.TabIndex = 11;
             // 
             // label3
@@ -280,7 +288,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(455, 238);
+            this.label3.Location = new System.Drawing.Point(539, 239);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 13;
@@ -289,17 +297,69 @@
             // quantityTxtBox
             // 
             this.quantityTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
-            this.quantityTxtBox.Location = new System.Drawing.Point(419, 236);
+            this.quantityTxtBox.Location = new System.Drawing.Point(503, 237);
             this.quantityTxtBox.Name = "quantityTxtBox";
             this.quantityTxtBox.Size = new System.Drawing.Size(30, 20);
             this.quantityTxtBox.TabIndex = 12;
             this.quantityTxtBox.Text = "1";
             // 
+            // testBtn
+            // 
+            this.testBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.testBtn.FlatAppearance.BorderSize = 0;
+            this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testBtn.ForeColor = System.Drawing.Color.White;
+            this.testBtn.Location = new System.Drawing.Point(832, 237);
+            this.testBtn.Name = "testBtn";
+            this.testBtn.Size = new System.Drawing.Size(160, 39);
+            this.testBtn.TabIndex = 14;
+            this.testBtn.Text = "TestDropDown";
+            this.testBtn.UseVisualStyleBackColor = false;
+            this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testToolStripMenuItem,
+            this.testToolStripMenuItem1,
+            this.testToolStripMenuItem2,
+            this.testToolStripMenuItem3});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testToolStripMenuItem.Text = "test";
+            // 
+            // testToolStripMenuItem1
+            // 
+            this.testToolStripMenuItem1.Name = "testToolStripMenuItem1";
+            this.testToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.testToolStripMenuItem1.Text = "test";
+            // 
+            // testToolStripMenuItem2
+            // 
+            this.testToolStripMenuItem2.Name = "testToolStripMenuItem2";
+            this.testToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.testToolStripMenuItem2.Text = "test";
+            // 
+            // testToolStripMenuItem3
+            // 
+            this.testToolStripMenuItem3.Name = "testToolStripMenuItem3";
+            this.testToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.testToolStripMenuItem3.Text = "test";
+            // 
             // AddingExpense
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
+            this.Controls.Add(this.testBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.quantityTxtBox);
             this.Controls.Add(this.categoryMenuPanel);
@@ -312,8 +372,9 @@
             this.Controls.Add(this.articleTxt);
             this.Controls.Add(this.amountTxt);
             this.Name = "AddingExpense";
-            this.Size = new System.Drawing.Size(1033, 601);
+            this.Size = new System.Drawing.Size(1188, 629);
             this.categoryMenuPanel.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +401,11 @@
         private System.Windows.Forms.ListBox listBoxAddedValues;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox quantityTxtBox;
+        private System.Windows.Forms.Button testBtn;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem3;
     }
 }
