@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.titlePanel = new System.Windows.Forms.Panel();
-            this.navBtn3 = new System.Windows.Forms.Button();
+            this.viewByBtn = new System.Windows.Forms.Button();
             this.addExpenseNavBtn = new System.Windows.Forms.Button();
             this.navBtn1 = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
             this.addingExpense = new Budgeteer.AddingExpense();
+            this.viewBy = new Budgeteer.ViewBy();
             this.titlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.titlePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.titlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(48)))));
-            this.titlePanel.Controls.Add(this.navBtn3);
+            this.titlePanel.Controls.Add(this.viewByBtn);
             this.titlePanel.Controls.Add(this.addExpenseNavBtn);
             this.titlePanel.Controls.Add(this.navBtn1);
             this.titlePanel.Controls.Add(this.titleLabel);
@@ -52,18 +53,19 @@
             this.titlePanel.Size = new System.Drawing.Size(1192, 81);
             this.titlePanel.TabIndex = 0;
             // 
-            // navBtn3
+            // viewByBtn
             // 
-            this.navBtn3.FlatAppearance.BorderSize = 0;
-            this.navBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navBtn3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBtn3.Location = new System.Drawing.Point(972, 0);
-            this.navBtn3.Margin = new System.Windows.Forms.Padding(4);
-            this.navBtn3.Name = "navBtn3";
-            this.navBtn3.Size = new System.Drawing.Size(220, 81);
-            this.navBtn3.TabIndex = 3;
-            this.navBtn3.Text = "button3";
-            this.navBtn3.UseVisualStyleBackColor = true;
+            this.viewByBtn.FlatAppearance.BorderSize = 0;
+            this.viewByBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewByBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewByBtn.Location = new System.Drawing.Point(972, 0);
+            this.viewByBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.viewByBtn.Name = "viewByBtn";
+            this.viewByBtn.Size = new System.Drawing.Size(220, 81);
+            this.viewByBtn.TabIndex = 3;
+            this.viewByBtn.Text = "View";
+            this.viewByBtn.UseVisualStyleBackColor = true;
+            this.viewByBtn.Click += new System.EventHandler(this.viewByBtn_Click);
             // 
             // addExpenseNavBtn
             // 
@@ -117,6 +119,18 @@
             this.addingExpense.Size = new System.Drawing.Size(1188, 629);
             this.addingExpense.TabIndex = 1;
             // 
+            // viewBy
+            // 
+            this.viewBy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.viewBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
+            this.viewBy.Location = new System.Drawing.Point(-4, 79);
+            this.viewBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.viewBy.Name = "viewBy";
+            this.viewBy.Size = new System.Drawing.Size(1188, 629);
+            this.viewBy.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -125,6 +139,7 @@
             this.ClientSize = new System.Drawing.Size(1182, 705);
             this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.addingExpense);
+            this.Controls.Add(this.viewBy);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -139,11 +154,12 @@
         #endregion
 
         private System.Windows.Forms.Panel titlePanel;
-        private System.Windows.Forms.Button navBtn3;
+        private System.Windows.Forms.Button viewByBtn;
         private System.Windows.Forms.Button addExpenseNavBtn;
         private System.Windows.Forms.Button navBtn1;
         private System.Windows.Forms.Label titleLabel;
         private AddingExpense addingExpense;
+        private ViewBy viewBy;
     }
 }
 

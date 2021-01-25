@@ -21,9 +21,19 @@ namespace Budgeteer.Classes.SqliteDataAccess
             }
 
         }
+        public static List<Expense.Expense> LoadExpence()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Expense.Expense>("select * from Expense", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
         private static string LoadConnectionString(string id = "Default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
+
     }
 }

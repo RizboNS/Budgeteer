@@ -21,5 +21,10 @@ namespace Budgeteer
         {
             addingExpense.BringToFront();
         }
+
+        private void viewByBtn_Click(object sender, EventArgs e)
+        {
+            viewBy.BringToFront();
+        }
     }
 }
