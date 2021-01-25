@@ -15,7 +15,10 @@ namespace Budgeteer
     public partial class AddingExpense : UserControl
     {
         private string category = "Not Listed";
+        private string article = "Not Listed";
         private List<string> listBoxValues = new List<string>();
+        private bool parseToDouble = false;
+        private double amount;
         public AddingExpense()
         {
             InitializeComponent();
@@ -41,8 +44,8 @@ namespace Budgeteer
         {
             // Creating Expense object and Displaying added string to the user.
             Expense expense = new Expense();
-            expense.amount = Convert.ToDouble(amountTxt.Text); // Need to add error mechanism
-            expense.article = articleTxt.Text;
+            expense.amount = amount;
+            expense.article = article;
             expense.month = dateTimePicker.Value.Date.ToString("MMMM");
             expense.year = dateTimePicker.Value.Date.ToString("yyyy");
             expense.category = category;
@@ -57,23 +60,31 @@ namespace Budgeteer
         {
             // Clear boxes so it is ready for next input.
             amountTxt.Clear();
-            articleTxt.Clear();
             quantityTxtBox.Text = "1";
         }
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
             // Saving to the DB and Displaying added obj to the user.
-            for (int i = 0; i < Convert.ToInt32(quantityTxtBox.Text); i++)
+            parseToDouble = double.TryParse(amountTxt.Text, out amount);
+            if (parseToDouble)
             {
-                SqliteDataAccess.SaveExpence(DisplayExpenseAddedAndReturnExpenseObj());
+                for (int i = 0; i < Convert.ToInt32(quantityTxtBox.Text); i++)
+                {
+                    SqliteDataAccess.SaveExpence(DisplayExpenseAddedAndReturnExpenseObj());
+                }
+                ClearInputBoxes();
             }
-            ClearInputBoxes();
+            else
+            {
+                MessageBox.Show("Price input should be a number.", "Error");
+            }
         }
 
-        private void setCategory(string value)
+        private void setCategoryAndArticle(string ctg, string artc)
         {
-            category = value;
-            categoryMenuBtn.Text = value;
+            category = ctg;
+            article = artc;
+            menuBtn.Text = artc;
         }
         private void showMenu(ContextMenuStrip menu, Button btn)
         {
@@ -81,27 +92,92 @@ namespace Budgeteer
         }
         private void categoryMenuBtn_Click(object sender, EventArgs e)
         {
-            showMenu(categoryMenu, categoryMenuBtn);
+            showMenu(categoryMenu, menuBtn);
         }
-
-        private void categoryMenuUtilBtn_Click(object sender, EventArgs e)
-        {
-            setCategory("Utility");
-        }
-
-        private void categoryMenuFood_Click(object sender, EventArgs e)
-        {
-            setCategory("Food");
-        }
-
+        // MENU BUTTONS
         private void categoryMenuNotListedBtn_Click(object sender, EventArgs e)
         {
-            setCategory("Not Listed");
+            setCategoryAndArticle("Not Listed","Not Listed");
         }
 
-        private void categoryMenuTransportationBtn_Click(object sender, EventArgs e)
+        private void electricityToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            setCategory("Transportation");
+            setCategoryAndArticle("Utility", "Electricity");
+        }
+
+        private void waterGarbageEtcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Utility", "Water and Garbage etc.");
+        }
+
+        private void cableAndInternetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Utility", "Cable and Internet");
+        }
+
+        private void phoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Utility", "Phone");
+        }
+
+        private void milkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Milk");
+        }
+
+        private void breadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Bread");
+        }
+
+        private void sunflowerOilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Sunflower Oil");
+        }
+
+        private void oliveOilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Olive Oil");
+        }
+
+        private void vegOilToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Veg Oil");
+        }
+
+        private void dogFoodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Dog Food");
+        }
+
+        private void sugarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Sugar");
+        }
+
+        private void wheatFlowerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Wheat Flower");
+        }
+
+        private void cornFlowerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Food", "Corn Flower");
+        }
+
+        private void gasolineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Transportation", "Gasoline");
+        }
+
+        private void busFareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Transportation", "Bus Fare");
+        }
+
+        private void otherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setCategoryAndArticle("Transportation", "Other");
         }
     }
 }
