@@ -20,7 +20,6 @@ namespace Budgeteer
         {
             InitializeComponent();
             SetMyCustomFormat();
-            menuStripDisplay(contextMenuStrip1);
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -37,12 +36,6 @@ namespace Budgeteer
             dateTimePicker.Format = DateTimePickerFormat.Custom;
             dateTimePicker.CustomFormat = "MMMM/yyyy";
             dateTimePicker.ShowUpDown = true;
-        }
-        private void menuStripDisplay(ContextMenuStrip contextMenuStrip)
-        {
-            contextMenuStrip.ForeColor = Color.Red;
-            contextMenuStrip.BackColor = Color.SkyBlue;
-
         }
         private Expense DisplayExpenseAddedAndReturnExpenseObj()
         {
@@ -76,79 +69,39 @@ namespace Budgeteer
             }
             ClearInputBoxes();
         }
-        private void CategoryMenuOnOff()
-        {
-            if (categoryMenuPanel.Visible)
-            {
-                categoryMenuPanel.Visible = false;
-            }
-            else
-            {
-                categoryMenuPanel.Visible = true;
-            }
-        }
+
         private void setCategory(string value)
         {
             category = value;
             categoryMenuBtn.Text = value;
         }
+        private void showMenu(ContextMenuStrip menu, Button btn)
+        {
+            menu.Show(btn, new Point(0, btn.Height));
+        }
         private void categoryMenuBtn_Click(object sender, EventArgs e)
         {
-            CategoryMenuOnOff();
+            showMenu(categoryMenu, categoryMenuBtn);
         }
 
         private void categoryMenuUtilBtn_Click(object sender, EventArgs e)
         {
             setCategory("Utility");
-            CategoryMenuOnOff();
         }
 
-        private void categoryMenuFoodBtn_Click(object sender, EventArgs e)
+        private void categoryMenuFood_Click(object sender, EventArgs e)
         {
             setCategory("Food");
-            CategoryMenuOnOff();
         }
 
-        private void categoryMenuWardrobeBtn_Click(object sender, EventArgs e)
+        private void categoryMenuNotListedBtn_Click(object sender, EventArgs e)
         {
-            setCategory("Wardrobe");
-            CategoryMenuOnOff();
-        }
-
-        private void categoryMenuKidsBtn_Click(object sender, EventArgs e)
-        {
-            setCategory("Kids");
-            CategoryMenuOnOff();
+            setCategory("Not Listed");
         }
 
         private void categoryMenuTransportationBtn_Click(object sender, EventArgs e)
         {
             setCategory("Transportation");
-            CategoryMenuOnOff();
         }
-
-        private void categoryMenuNonEssentialsBtn_Click(object sender, EventArgs e)
-        {
-            setCategory("Non Essentials");
-            CategoryMenuOnOff();
-        }
-
-        private void categoryMenuCareProductsBtn_Click(object sender, EventArgs e)
-        {
-            setCategory("Care Products");
-            CategoryMenuOnOff();
-        }
-
-        private void categoryMenuNotListed_Click(object sender, EventArgs e)
-        {
-            setCategory("Not Listed");
-            CategoryMenuOnOff();
-        }
-
-        private void testBtn_Click(object sender, EventArgs e)
-        {
-            contextMenuStrip1.Show(testBtn, new Point(0, testBtn.Height));
-        }
-
     }
 }
