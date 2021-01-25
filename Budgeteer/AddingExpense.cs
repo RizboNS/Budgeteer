@@ -20,6 +20,7 @@ namespace Budgeteer
         {
             InitializeComponent();
             SetMyCustomFormat();
+            menuStripDisplay(contextMenuStrip1);
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -30,12 +31,18 @@ namespace Budgeteer
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-        public void SetMyCustomFormat()
+        private void SetMyCustomFormat()
         {
             // Set the Format type and the CustomFormat string.
             dateTimePicker.Format = DateTimePickerFormat.Custom;
             dateTimePicker.CustomFormat = "MMMM/yyyy";
             dateTimePicker.ShowUpDown = true;
+        }
+        private void menuStripDisplay(ContextMenuStrip contextMenuStrip)
+        {
+            contextMenuStrip.ForeColor = Color.Red;
+            contextMenuStrip.BackColor = Color.SkyBlue;
+
         }
         private Expense DisplayExpenseAddedAndReturnExpenseObj()
         {
@@ -142,5 +149,6 @@ namespace Budgeteer
         {
             contextMenuStrip1.Show(testBtn, new Point(0, testBtn.Height));
         }
+
     }
 }

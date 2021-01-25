@@ -43,17 +43,16 @@
             this.categoryMenuTransportationBtn = new System.Windows.Forms.Button();
             this.categoryMenuWardrobeBtn = new System.Windows.Forms.Button();
             this.categoryMenuFoodBtn = new System.Windows.Forms.Button();
-            this.categoryMenuUtilBtn = new System.Windows.Forms.Button();
             this.categoryMenuBtn = new System.Windows.Forms.Button();
             this.listBoxAddedValues = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.quantityTxtBox = new System.Windows.Forms.TextBox();
             this.testBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuUtilBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryMenuPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -133,7 +132,6 @@
             this.categoryMenuPanel.Controls.Add(this.categoryMenuTransportationBtn);
             this.categoryMenuPanel.Controls.Add(this.categoryMenuWardrobeBtn);
             this.categoryMenuPanel.Controls.Add(this.categoryMenuFoodBtn);
-            this.categoryMenuPanel.Controls.Add(this.categoryMenuUtilBtn);
             this.categoryMenuPanel.Location = new System.Drawing.Point(379, 260);
             this.categoryMenuPanel.Name = "categoryMenuPanel";
             this.categoryMenuPanel.Size = new System.Drawing.Size(100, 212);
@@ -245,21 +243,6 @@
             this.categoryMenuFoodBtn.UseVisualStyleBackColor = false;
             this.categoryMenuFoodBtn.Click += new System.EventHandler(this.categoryMenuFoodBtn_Click);
             // 
-            // categoryMenuUtilBtn
-            // 
-            this.categoryMenuUtilBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.categoryMenuUtilBtn.FlatAppearance.BorderSize = 0;
-            this.categoryMenuUtilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryMenuUtilBtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryMenuUtilBtn.ForeColor = System.Drawing.Color.White;
-            this.categoryMenuUtilBtn.Location = new System.Drawing.Point(0, 0);
-            this.categoryMenuUtilBtn.Name = "categoryMenuUtilBtn";
-            this.categoryMenuUtilBtn.Size = new System.Drawing.Size(100, 26);
-            this.categoryMenuUtilBtn.TabIndex = 11;
-            this.categoryMenuUtilBtn.Text = "Utility";
-            this.categoryMenuUtilBtn.UseVisualStyleBackColor = false;
-            this.categoryMenuUtilBtn.Click += new System.EventHandler(this.categoryMenuUtilBtn_Click);
-            // 
             // categoryMenuBtn
             // 
             this.categoryMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
@@ -323,36 +306,36 @@
             this.contextMenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.contextMenuStrip1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem,
+            this.categoryMenuUtilBtn,
             this.testToolStripMenuItem1,
             this.testToolStripMenuItem2,
             this.testToolStripMenuItem3});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
-            // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.testToolStripMenuItem.Text = "test";
-            // 
-            // testToolStripMenuItem1
-            // 
-            this.testToolStripMenuItem1.Name = "testToolStripMenuItem1";
-            this.testToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.testToolStripMenuItem1.Text = "test";
-            // 
-            // testToolStripMenuItem2
-            // 
-            this.testToolStripMenuItem2.Name = "testToolStripMenuItem2";
-            this.testToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.testToolStripMenuItem2.Text = "test";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(110, 92);
             // 
             // testToolStripMenuItem3
             // 
             this.testToolStripMenuItem3.Name = "testToolStripMenuItem3";
-            this.testToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.testToolStripMenuItem3.Size = new System.Drawing.Size(109, 22);
             this.testToolStripMenuItem3.Text = "test";
+            // 
+            // testToolStripMenuItem2
+            // 
+            this.testToolStripMenuItem2.Name = "testToolStripMenuItem2";
+            this.testToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.testToolStripMenuItem2.Text = "test";
+            // 
+            // testToolStripMenuItem1
+            // 
+            this.testToolStripMenuItem1.Name = "testToolStripMenuItem1";
+            this.testToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.testToolStripMenuItem1.Text = "test";
+            // 
+            // categoryMenuUtilBtn
+            // 
+            this.categoryMenuUtilBtn.Name = "categoryMenuUtilBtn";
+            this.categoryMenuUtilBtn.Size = new System.Drawing.Size(109, 22);
+            this.categoryMenuUtilBtn.Text = "Utility";
             // 
             // AddingExpense
             // 
@@ -395,7 +378,6 @@
         private System.Windows.Forms.Button categoryMenuTransportationBtn;
         private System.Windows.Forms.Button categoryMenuWardrobeBtn;
         private System.Windows.Forms.Button categoryMenuFoodBtn;
-        private System.Windows.Forms.Button categoryMenuUtilBtn;
         private System.Windows.Forms.Button categoryMenuBtn;
         private System.Windows.Forms.Button categoryMenuNotListed;
         private System.Windows.Forms.ListBox listBoxAddedValues;
@@ -403,7 +385,7 @@
         private System.Windows.Forms.TextBox quantityTxtBox;
         private System.Windows.Forms.Button testBtn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuUtilBtn;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem3;
