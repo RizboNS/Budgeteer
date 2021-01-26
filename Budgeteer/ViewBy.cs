@@ -20,6 +20,14 @@ namespace Budgeteer
         public ViewBy()
         {
             InitializeComponent();
+            SetMyCustomFormat();
+        }
+        private void SetMyCustomFormat()
+        {
+            // Set the Format type and the CustomFormat string.
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.CustomFormat = "MMMM/yyyy";
+            dateTimePicker.ShowUpDown = true;
         }
 
         private void loadDataToDGV()
@@ -34,10 +42,6 @@ namespace Budgeteer
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = displayList;
         }
-        private void showMenu(ContextMenuStrip menu, Button btn)
-        {
-            menu.Show(btn, new Point(0, btn.Height));
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             loadDataToDGV();
@@ -45,13 +49,8 @@ namespace Budgeteer
 
         private void testBtn_Click(object sender, EventArgs e)
         {
-            showMenu(contextMenuStrip1, testBtn);
-        }
-
-        private void januaryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            month = "January";
-            year = "2021";
+            month = dateTimePicker.Value.Date.ToString("MMMM");
+            year = dateTimePicker.Value.Date.ToString("yyyy");
             loadDataToDGVbyMonthAndYear();
         }
     }

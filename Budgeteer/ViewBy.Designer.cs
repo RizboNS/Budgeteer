@@ -36,29 +36,15 @@
             this.fullLoadBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.testBtn = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.januaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.februaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aprilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.juneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.julyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.julyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.augustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.septemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.octoberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.decemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.articleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expenseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expenseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +53,7 @@
             this.menuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.menuPanel.Controls.Add(this.textBox1);
+            this.menuPanel.Controls.Add(this.dateTimePicker);
             this.menuPanel.Controls.Add(this.testBtn);
             this.menuPanel.Controls.Add(this.fullLoadBtn);
             this.menuPanel.Location = new System.Drawing.Point(0, 0);
@@ -77,7 +63,6 @@
             // 
             // fullLoadBtn
             // 
-            this.fullLoadBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.fullLoadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fullLoadBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullLoadBtn.ForeColor = System.Drawing.Color.White;
@@ -137,11 +122,10 @@
             // 
             // testBtn
             // 
-            this.testBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testBtn.ForeColor = System.Drawing.Color.White;
-            this.testBtn.Location = new System.Drawing.Point(0, 61);
+            this.testBtn.Location = new System.Drawing.Point(0, 101);
             this.testBtn.Name = "testBtn";
             this.testBtn.Size = new System.Drawing.Size(203, 61);
             this.testBtn.TabIndex = 1;
@@ -149,96 +133,12 @@
             this.testBtn.UseVisualStyleBackColor = true;
             this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
             // 
-            // contextMenuStrip1
+            // dateTimePicker
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.januaryToolStripMenuItem,
-            this.februaryToolStripMenuItem,
-            this.marchToolStripMenuItem,
-            this.aprilToolStripMenuItem,
-            this.juneToolStripMenuItem,
-            this.julyToolStripMenuItem,
-            this.julyToolStripMenuItem1,
-            this.augustToolStripMenuItem,
-            this.septemberToolStripMenuItem,
-            this.octoberToolStripMenuItem,
-            this.novemberToolStripMenuItem,
-            this.decemberToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 268);
-            // 
-            // januaryToolStripMenuItem
-            // 
-            this.januaryToolStripMenuItem.Name = "januaryToolStripMenuItem";
-            this.januaryToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.januaryToolStripMenuItem.Text = "January";
-            this.januaryToolStripMenuItem.Click += new System.EventHandler(this.januaryToolStripMenuItem_Click);
-            // 
-            // februaryToolStripMenuItem
-            // 
-            this.februaryToolStripMenuItem.Name = "februaryToolStripMenuItem";
-            this.februaryToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.februaryToolStripMenuItem.Text = "February";
-            // 
-            // marchToolStripMenuItem
-            // 
-            this.marchToolStripMenuItem.Name = "marchToolStripMenuItem";
-            this.marchToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.marchToolStripMenuItem.Text = "March";
-            // 
-            // aprilToolStripMenuItem
-            // 
-            this.aprilToolStripMenuItem.Name = "aprilToolStripMenuItem";
-            this.aprilToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.aprilToolStripMenuItem.Text = "April";
-            // 
-            // juneToolStripMenuItem
-            // 
-            this.juneToolStripMenuItem.Name = "juneToolStripMenuItem";
-            this.juneToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.juneToolStripMenuItem.Text = "May";
-            // 
-            // julyToolStripMenuItem
-            // 
-            this.julyToolStripMenuItem.Name = "julyToolStripMenuItem";
-            this.julyToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.julyToolStripMenuItem.Text = "July";
-            // 
-            // julyToolStripMenuItem1
-            // 
-            this.julyToolStripMenuItem1.Name = "julyToolStripMenuItem1";
-            this.julyToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
-            this.julyToolStripMenuItem1.Text = "June";
-            // 
-            // augustToolStripMenuItem
-            // 
-            this.augustToolStripMenuItem.Name = "augustToolStripMenuItem";
-            this.augustToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.augustToolStripMenuItem.Text = "August";
-            // 
-            // septemberToolStripMenuItem
-            // 
-            this.septemberToolStripMenuItem.Name = "septemberToolStripMenuItem";
-            this.septemberToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.septemberToolStripMenuItem.Text = "September";
-            // 
-            // octoberToolStripMenuItem
-            // 
-            this.octoberToolStripMenuItem.Name = "octoberToolStripMenuItem";
-            this.octoberToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.octoberToolStripMenuItem.Text = "October";
-            // 
-            // novemberToolStripMenuItem
-            // 
-            this.novemberToolStripMenuItem.Name = "novemberToolStripMenuItem";
-            this.novemberToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.novemberToolStripMenuItem.Text = "November";
-            // 
-            // decemberToolStripMenuItem
-            // 
-            this.decemberToolStripMenuItem.Name = "decemberToolStripMenuItem";
-            this.decemberToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.decemberToolStripMenuItem.Text = "December";
+            this.dateTimePicker.Location = new System.Drawing.Point(4, 68);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker.TabIndex = 2;
             // 
             // amountDataGridViewTextBoxColumn
             // 
@@ -279,13 +179,6 @@
             // 
             this.expenseBindingSource.DataSource = typeof(Budgeteer.Classes.Expense.Expense);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
             // ViewBy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,9 +189,7 @@
             this.Name = "ViewBy";
             this.Size = new System.Drawing.Size(1188, 629);
             this.menuPanel.ResumeLayout(false);
-            this.menuPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.expenseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -316,19 +207,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn articleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button testBtn;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem januaryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem februaryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem marchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aprilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem juneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem julyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem julyToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem augustToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem septemberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem octoberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novemberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem decemberToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }
