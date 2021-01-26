@@ -30,28 +30,39 @@ namespace Budgeteer
             dateTimePicker.ShowUpDown = true;
         }
 
-        private void loadDataToDGV()
+        private void fullLoad()
         {
             displayList = SqliteDataAccess.LoadExpence();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = displayList;
-        }
-        private void loadDataToDGVbyMonthAndYear()
-        {
-            displayList = SqliteDataAccess.LoadExpenceByMonthAndYear(month,year);
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = displayList;
+
+            double sum = SqliteDataAccess.FullLoadExpenseSum();
+            textBoxSum.Text = sum.ToString();
+            textBoxCount.Text = displayList.Count().ToString();
+
+            double sumByCategory = SqliteDataAccess.FullLoadExpenseSumByCategory("Utility");
+            textBoxUtilitySum.Text = sumByCategory.ToString();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            loadDataToDGV();
+            fullLoad();
         }
 
         private void testBtn_Click(object sender, EventArgs e)
         {
+            loadByMonthAndYear();
+        }
+
+        private void loadByMonthAndYear()
+        {
             month = dateTimePicker.Value.Date.ToString("MMMM");
             year = dateTimePicker.Value.Date.ToString("yyyy");
-            loadDataToDGVbyMonthAndYear();
+            displayList = SqliteDataAccess.LoadExpenceByMonthAndYear(month, year);
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = displayList;
+            double sum = SqliteDataAccess.getExpenseSumByMonthAndYear(month, year);
+            textBoxSum.Text = sum.ToString();
+            textBoxCount.Text = displayList.Count().ToString();
         }
     }
 }

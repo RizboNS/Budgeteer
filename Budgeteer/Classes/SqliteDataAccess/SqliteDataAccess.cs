@@ -29,6 +29,20 @@ namespace Budgeteer.Classes.SqliteDataAccess
                 return output.ToList();
             }
         }
+        public static double FullLoadExpenseSum()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                return (double)cnn.ExecuteScalar($"SELECT sum(Amount) FROM Expense", new DynamicParameters());
+            }
+        }
+        public static double FullLoadExpenseSumByCategory(string category)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                return (double)cnn.ExecuteScalar($"SELECT sum(Amount) FROM Expense Where Category = '{category}'", new DynamicParameters());
+            }
+        }
 
         private static string LoadConnectionString(string id = "Default")
         {
@@ -44,5 +58,12 @@ namespace Budgeteer.Classes.SqliteDataAccess
             }
         }
 
+        public static double getExpenseSumByMonthAndYear(string month, string year)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                return (double)cnn.ExecuteScalar($"SELECT sum(Amount) FROM Expense WHERE Month = '{month}' AND Year = '{year}'", new DynamicParameters());
+            }
+        }
     }
 }
