@@ -15,6 +15,8 @@ namespace Budgeteer
     public partial class ViewBy : UserControl
     {
         private List<Expense> displayList = new List<Expense>();
+        string month = "";
+        string year = "";
         public ViewBy()
         {
             InitializeComponent();
@@ -26,10 +28,31 @@ namespace Budgeteer
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = displayList;
         }
-
+        private void loadDataToDGVbyMonthAndYear()
+        {
+            displayList = SqliteDataAccess.LoadExpenceByMonthAndYear(month,year);
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = displayList;
+        }
+        private void showMenu(ContextMenuStrip menu, Button btn)
+        {
+            menu.Show(btn, new Point(0, btn.Height));
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             loadDataToDGV();
+        }
+
+        private void testBtn_Click(object sender, EventArgs e)
+        {
+            showMenu(contextMenuStrip1, testBtn);
+        }
+
+        private void januaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            month = "January";
+            year = "2021";
+            loadDataToDGVbyMonthAndYear();
         }
     }
 }

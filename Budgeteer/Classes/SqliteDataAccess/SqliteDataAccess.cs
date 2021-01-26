@@ -35,5 +35,14 @@ namespace Budgeteer.Classes.SqliteDataAccess
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
 
+        public static List<Expense.Expense> LoadExpenceByMonthAndYear(string month, string year)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Expense.Expense>($"SELECT * FROM Expense WHERE Month = '{month}' AND Year = '{year}'", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
     }
 }
