@@ -89,5 +89,18 @@ namespace Budgeteer
             textBoxCount.Text = displayList.Count(exp => exp.category.Equals(category)).ToString();
         }
         #endregion
+
+        private void clearTableBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("This action will delete all DataTable entry.",
+                      "Warning deleting all data from database", MessageBoxButtons.YesNo);
+            switch (dr)
+            {
+                case DialogResult.Yes: SqliteDataAccess.deleteAllDataFromTable();
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
     }
 }

@@ -39,12 +39,6 @@
             this.loadByTime = new System.Windows.Forms.Button();
             this.fullLoadBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.articleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expenseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxSum = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCount = new System.Windows.Forms.TextBox();
@@ -65,6 +59,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxNotListCount = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.articleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clearTableBtn = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenseBindingSource)).BeginInit();
@@ -75,6 +76,7 @@
             this.menuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.menuPanel.Controls.Add(this.clearTableBtn);
             this.menuPanel.Controls.Add(this.dateTimePicker);
             this.menuPanel.Controls.Add(this.loadByTime);
             this.menuPanel.Controls.Add(this.fullLoadBtn);
@@ -184,50 +186,6 @@
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(296, 292);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
-            this.amountDataGridViewTextBoxColumn.Width = 68;
-            // 
-            // monthDataGridViewTextBoxColumn
-            // 
-            this.monthDataGridViewTextBoxColumn.DataPropertyName = "month";
-            this.monthDataGridViewTextBoxColumn.HeaderText = "Month";
-            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
-            this.monthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.monthDataGridViewTextBoxColumn.Width = 77;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // articleDataGridViewTextBoxColumn
-            // 
-            this.articleDataGridViewTextBoxColumn.DataPropertyName = "article";
-            this.articleDataGridViewTextBoxColumn.HeaderText = "Article";
-            this.articleDataGridViewTextBoxColumn.Name = "articleDataGridViewTextBoxColumn";
-            this.articleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.articleDataGridViewTextBoxColumn.Width = 79;
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryDataGridViewTextBoxColumn.Width = 101;
-            // 
-            // expenseBindingSource
-            // 
-            this.expenseBindingSource.DataSource = typeof(Budgeteer.Classes.Expense.Expense);
             // 
             // textBoxSum
             // 
@@ -419,6 +377,63 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Items Count";
             // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.amountDataGridViewTextBoxColumn.Width = 68;
+            // 
+            // monthDataGridViewTextBoxColumn
+            // 
+            this.monthDataGridViewTextBoxColumn.DataPropertyName = "month";
+            this.monthDataGridViewTextBoxColumn.HeaderText = "Month";
+            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
+            this.monthDataGridViewTextBoxColumn.ReadOnly = true;
+            this.monthDataGridViewTextBoxColumn.Width = 77;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            this.yearDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // articleDataGridViewTextBoxColumn
+            // 
+            this.articleDataGridViewTextBoxColumn.DataPropertyName = "article";
+            this.articleDataGridViewTextBoxColumn.HeaderText = "Article";
+            this.articleDataGridViewTextBoxColumn.Name = "articleDataGridViewTextBoxColumn";
+            this.articleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.articleDataGridViewTextBoxColumn.Width = 79;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // expenseBindingSource
+            // 
+            this.expenseBindingSource.DataSource = typeof(Budgeteer.Classes.Expense.Expense);
+            // 
+            // clearTableBtn
+            // 
+            this.clearTableBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearTableBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearTableBtn.ForeColor = System.Drawing.Color.White;
+            this.clearTableBtn.Location = new System.Drawing.Point(0, 168);
+            this.clearTableBtn.Name = "clearTableBtn";
+            this.clearTableBtn.Size = new System.Drawing.Size(203, 61);
+            this.clearTableBtn.TabIndex = 3;
+            this.clearTableBtn.Text = "Delete all data";
+            this.clearTableBtn.UseVisualStyleBackColor = true;
+            this.clearTableBtn.Click += new System.EventHandler(this.clearTableBtn_Click);
+            // 
             // ViewBy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,5 +504,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxNotListCount;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button clearTableBtn;
     }
 }

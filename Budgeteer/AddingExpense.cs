@@ -94,6 +94,7 @@ namespace Budgeteer
         {
             showMenu(categoryMenu, menuBtn);
         }
+        #region Menu Buttons Clicks
         // MENU BUTTONS
         private void categoryMenuNotListedBtn_Click(object sender, EventArgs e)
         {
@@ -179,5 +180,6 @@ namespace Budgeteer
         {
             setCategoryAndArticle("Transportation", "Other");
         }
+        #endregion
     }
 }

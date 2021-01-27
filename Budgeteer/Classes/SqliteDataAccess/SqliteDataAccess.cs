@@ -44,5 +44,12 @@ namespace Budgeteer.Classes.SqliteDataAccess
             // Connection String
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
+        public static void deleteAllDataFromTable()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE FROM Expense");
+            }
+        }
     }
 }
