@@ -70,7 +70,7 @@ namespace Budgeteer
             {
                 for (int i = 0; i < Convert.ToInt32(quantityTxtBox.Text); i++)
                 {
-                    SqliteDataAccess.SaveExpence(DisplayExpenseAddedAndReturnExpenseObj());
+                    SqliteDataAccess.SaveToDb(DisplayExpenseAddedAndReturnExpenseObj());
                 }
                 ClearInputBoxes();
             }

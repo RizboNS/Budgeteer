@@ -13,29 +13,32 @@ namespace Budgeteer.Classes.SqliteDataAccess
 {
     public static class SqliteDataAccess
     {
-        public static void SaveExpence(Expense.Expense expense)
+        public static void SaveToDb(Expense.Expense expense)
+            // Save Expense object to the DB
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute("insert into Expense (Amount, Article,Month,Year,Category) values (@amount, @article,@month,@year,@category)", expense);
             }
-
         }
-        public static List<Expense.Expense> LoadExpence()
+        public static List<Expense.Expense> LoadFromDbToList(string sqlCommand)
         {
+            // Load Expense object from DB
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 var output = cnn.Query<Expense.Expense>("select * from Expense", new DynamicParameters());
                 return output.ToList();
             }
         }
-        public static double FullLoadExpenseSum()
+        public static double LoadFromDbToDouble(string sqlCommand)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 return (double)cnn.ExecuteScalar($"SELECT sum(Amount) FROM Expense", new DynamicParameters());
             }
         }
+
+
         public static double FullLoadExpenseSumByCategory(string category)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))

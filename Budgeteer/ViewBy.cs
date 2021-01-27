@@ -32,11 +32,11 @@ namespace Budgeteer
 
         private void fullLoad()
         {
-            displayList = SqliteDataAccess.LoadExpence();
+            displayList = SqliteDataAccess.LoadFromDbToList();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = displayList;
 
-            double sum = SqliteDataAccess.FullLoadExpenseSum();
+            double sum = SqliteDataAccess.LoadFromDbToDouble();
             textBoxSum.Text = sum.ToString();
             textBoxCount.Text = displayList.Count().ToString();
 
