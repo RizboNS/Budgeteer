@@ -23,50 +23,26 @@ namespace Budgeteer.Classes.SqliteDataAccess
         }
         public static List<Expense.Expense> LoadFromDbToList(string sqlCommand)
         {
-            // Load Expense object from DB
+            // Load Expense object from DB to List
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Expense.Expense>("select * from Expense", new DynamicParameters());
+                var output = cnn.Query<Expense.Expense>(sqlCommand, new DynamicParameters());
                 return output.ToList();
             }
         }
         public static double LoadFromDbToDouble(string sqlCommand)
         {
+            // Load from Expense DB to single value par
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                return (double)cnn.ExecuteScalar($"SELECT sum(Amount) FROM Expense", new DynamicParameters());
-            }
-        }
-
-
-        public static double FullLoadExpenseSumByCategory(string category)
-        {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                return (double)cnn.ExecuteScalar($"SELECT sum(Amount) FROM Expense Where Category = '{category}'", new DynamicParameters());
+                return (double)cnn.ExecuteScalar(sqlCommand, new DynamicParameters());
             }
         }
 
         private static string LoadConnectionString(string id = "Default")
         {
+            // Connection String
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
-        }
-
-        public static List<Expense.Expense> LoadExpenceByMonthAndYear(string month, string year)
-        {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                var output = cnn.Query<Expense.Expense>($"SELECT * FROM Expense WHERE Month = '{month}' AND Year = '{year}'", new DynamicParameters());
-                return output.ToList();
-            }
-        }
-
-        public static double getExpenseSumByMonthAndYear(string month, string year)
-        {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                return (double)cnn.ExecuteScalar($"SELECT sum(Amount) FROM Expense WHERE Month = '{month}' AND Year = '{year}'", new DynamicParameters());
-            }
         }
     }
 }
