@@ -34,7 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuPanel = new System.Windows.Forms.Panel();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.loadByTime = new System.Windows.Forms.Button();
             this.fullLoadBtn = new System.Windows.Forms.Button();
@@ -68,28 +67,13 @@
             this.articleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expenseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuPanel
-            // 
-            this.menuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
-            this.menuPanel.Controls.Add(this.clearTableBtn);
-            this.menuPanel.Controls.Add(this.dateTimePicker);
-            this.menuPanel.Controls.Add(this.loadByTime);
-            this.menuPanel.Controls.Add(this.fullLoadBtn);
-            this.menuPanel.Location = new System.Drawing.Point(0, 0);
-            this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(203, 629);
-            this.menuPanel.TabIndex = 0;
-            // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(4, 68);
+            this.dateTimePicker.Location = new System.Drawing.Point(212, 420);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker.TabIndex = 2;
@@ -100,7 +84,7 @@
             this.loadByTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loadByTime.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadByTime.ForeColor = System.Drawing.Color.White;
-            this.loadByTime.Location = new System.Drawing.Point(0, 101);
+            this.loadByTime.Location = new System.Drawing.Point(212, 459);
             this.loadByTime.Name = "loadByTime";
             this.loadByTime.Size = new System.Drawing.Size(203, 61);
             this.loadByTime.TabIndex = 1;
@@ -114,7 +98,7 @@
             this.fullLoadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fullLoadBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullLoadBtn.ForeColor = System.Drawing.Color.White;
-            this.fullLoadBtn.Location = new System.Drawing.Point(0, 0);
+            this.fullLoadBtn.Location = new System.Drawing.Point(421, 459);
             this.fullLoadBtn.Name = "fullLoadBtn";
             this.fullLoadBtn.Size = new System.Drawing.Size(203, 61);
             this.fullLoadBtn.TabIndex = 0;
@@ -125,6 +109,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -133,7 +118,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -167,7 +152,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
-            this.dataGridView1.Location = new System.Drawing.Point(247, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(487, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -187,15 +172,15 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(296, 292);
+            this.dataGridView1.Size = new System.Drawing.Size(470, 292);
             this.dataGridView1.TabIndex = 1;
             // 
             // textBoxSum
             // 
-            this.textBoxSum.Location = new System.Drawing.Point(581, 72);
+            this.textBoxSum.Location = new System.Drawing.Point(487, 372);
             this.textBoxSum.Name = "textBoxSum";
             this.textBoxSum.ReadOnly = true;
-            this.textBoxSum.Size = new System.Drawing.Size(77, 20);
+            this.textBoxSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxSum.TabIndex = 2;
             // 
             // label1
@@ -203,7 +188,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(663, 74);
+            this.label1.Location = new System.Drawing.Point(553, 374);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 3;
@@ -211,10 +196,10 @@
             // 
             // textBoxCount
             // 
-            this.textBoxCount.Location = new System.Drawing.Point(787, 72);
+            this.textBoxCount.Location = new System.Drawing.Point(487, 396);
             this.textBoxCount.Name = "textBoxCount";
             this.textBoxCount.ReadOnly = true;
-            this.textBoxCount.Size = new System.Drawing.Size(77, 20);
+            this.textBoxCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxCount.TabIndex = 4;
             // 
             // label2
@@ -222,7 +207,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(884, 74);
+            this.label2.Location = new System.Drawing.Point(553, 400);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 5;
@@ -230,10 +215,10 @@
             // 
             // textBoxUtilitySum
             // 
-            this.textBoxUtilitySum.Location = new System.Drawing.Point(581, 124);
+            this.textBoxUtilitySum.Location = new System.Drawing.Point(645, 372);
             this.textBoxUtilitySum.Name = "textBoxUtilitySum";
             this.textBoxUtilitySum.ReadOnly = true;
-            this.textBoxUtilitySum.Size = new System.Drawing.Size(77, 20);
+            this.textBoxUtilitySum.Size = new System.Drawing.Size(60, 20);
             this.textBoxUtilitySum.TabIndex = 6;
             // 
             // label3
@@ -241,7 +226,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(663, 126);
+            this.label3.Location = new System.Drawing.Point(711, 374);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 7;
@@ -249,10 +234,10 @@
             // 
             // textBoxUtilityCount
             // 
-            this.textBoxUtilityCount.Location = new System.Drawing.Point(787, 124);
+            this.textBoxUtilityCount.Location = new System.Drawing.Point(645, 396);
             this.textBoxUtilityCount.Name = "textBoxUtilityCount";
             this.textBoxUtilityCount.ReadOnly = true;
-            this.textBoxUtilityCount.Size = new System.Drawing.Size(77, 20);
+            this.textBoxUtilityCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxUtilityCount.TabIndex = 8;
             // 
             // label4
@@ -260,7 +245,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(884, 128);
+            this.label4.Location = new System.Drawing.Point(711, 398);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 9;
@@ -268,10 +253,10 @@
             // 
             // textBoxFoodSum
             // 
-            this.textBoxFoodSum.Location = new System.Drawing.Point(581, 176);
+            this.textBoxFoodSum.Location = new System.Drawing.Point(645, 434);
             this.textBoxFoodSum.Name = "textBoxFoodSum";
             this.textBoxFoodSum.ReadOnly = true;
-            this.textBoxFoodSum.Size = new System.Drawing.Size(77, 20);
+            this.textBoxFoodSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxFoodSum.TabIndex = 10;
             // 
             // label6
@@ -279,7 +264,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(664, 176);
+            this.label6.Location = new System.Drawing.Point(711, 436);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 11;
@@ -287,10 +272,10 @@
             // 
             // textBoxFoodCount
             // 
-            this.textBoxFoodCount.Location = new System.Drawing.Point(787, 177);
+            this.textBoxFoodCount.Location = new System.Drawing.Point(645, 457);
             this.textBoxFoodCount.Name = "textBoxFoodCount";
             this.textBoxFoodCount.ReadOnly = true;
-            this.textBoxFoodCount.Size = new System.Drawing.Size(77, 20);
+            this.textBoxFoodCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxFoodCount.TabIndex = 12;
             // 
             // labelItemsCount
@@ -298,7 +283,7 @@
             this.labelItemsCount.AutoSize = true;
             this.labelItemsCount.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelItemsCount.ForeColor = System.Drawing.Color.White;
-            this.labelItemsCount.Location = new System.Drawing.Point(884, 172);
+            this.labelItemsCount.Location = new System.Drawing.Point(710, 457);
             this.labelItemsCount.Name = "labelItemsCount";
             this.labelItemsCount.Size = new System.Drawing.Size(73, 16);
             this.labelItemsCount.TabIndex = 13;
@@ -306,10 +291,10 @@
             // 
             // textBoxTranspSum
             // 
-            this.textBoxTranspSum.Location = new System.Drawing.Point(581, 228);
+            this.textBoxTranspSum.Location = new System.Drawing.Point(788, 372);
             this.textBoxTranspSum.Name = "textBoxTranspSum";
             this.textBoxTranspSum.ReadOnly = true;
-            this.textBoxTranspSum.Size = new System.Drawing.Size(77, 20);
+            this.textBoxTranspSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxTranspSum.TabIndex = 14;
             // 
             // label7
@@ -317,7 +302,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(664, 232);
+            this.label7.Location = new System.Drawing.Point(855, 376);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 16);
             this.label7.TabIndex = 15;
@@ -325,10 +310,10 @@
             // 
             // textBoxTranspCount
             // 
-            this.textBoxTranspCount.Location = new System.Drawing.Point(787, 226);
+            this.textBoxTranspCount.Location = new System.Drawing.Point(788, 394);
             this.textBoxTranspCount.Name = "textBoxTranspCount";
             this.textBoxTranspCount.ReadOnly = true;
-            this.textBoxTranspCount.Size = new System.Drawing.Size(77, 20);
+            this.textBoxTranspCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxTranspCount.TabIndex = 16;
             // 
             // label5
@@ -336,7 +321,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(884, 230);
+            this.label5.Location = new System.Drawing.Point(854, 398);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 16);
             this.label5.TabIndex = 17;
@@ -344,10 +329,10 @@
             // 
             // textBoxNotListSum
             // 
-            this.textBoxNotListSum.Location = new System.Drawing.Point(581, 280);
+            this.textBoxNotListSum.Location = new System.Drawing.Point(788, 434);
             this.textBoxNotListSum.Name = "textBoxNotListSum";
             this.textBoxNotListSum.ReadOnly = true;
-            this.textBoxNotListSum.Size = new System.Drawing.Size(77, 20);
+            this.textBoxNotListSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxNotListSum.TabIndex = 18;
             // 
             // label9
@@ -355,7 +340,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(661, 280);
+            this.label9.Location = new System.Drawing.Point(852, 434);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 16);
             this.label9.TabIndex = 19;
@@ -363,10 +348,10 @@
             // 
             // textBoxNotListCount
             // 
-            this.textBoxNotListCount.Location = new System.Drawing.Point(787, 278);
+            this.textBoxNotListCount.Location = new System.Drawing.Point(788, 457);
             this.textBoxNotListCount.Name = "textBoxNotListCount";
             this.textBoxNotListCount.ReadOnly = true;
-            this.textBoxNotListCount.Size = new System.Drawing.Size(77, 20);
+            this.textBoxNotListCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxNotListCount.TabIndex = 20;
             // 
             // label8
@@ -374,7 +359,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(884, 278);
+            this.label8.Location = new System.Drawing.Point(854, 457);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 16);
             this.label8.TabIndex = 21;
@@ -386,7 +371,7 @@
             this.clearTableBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearTableBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearTableBtn.ForeColor = System.Drawing.Color.White;
-            this.clearTableBtn.Location = new System.Drawing.Point(0, 168);
+            this.clearTableBtn.Location = new System.Drawing.Point(3, 459);
             this.clearTableBtn.Name = "clearTableBtn";
             this.clearTableBtn.Size = new System.Drawing.Size(203, 61);
             this.clearTableBtn.TabIndex = 3;
@@ -400,9 +385,9 @@
             this.deleteSelectedRowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteSelectedRowBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteSelectedRowBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteSelectedRowBtn.Location = new System.Drawing.Point(247, 23);
+            this.deleteSelectedRowBtn.Location = new System.Drawing.Point(487, 7);
             this.deleteSelectedRowBtn.Name = "deleteSelectedRowBtn";
-            this.deleteSelectedRowBtn.Size = new System.Drawing.Size(296, 43);
+            this.deleteSelectedRowBtn.Size = new System.Drawing.Size(470, 43);
             this.deleteSelectedRowBtn.TabIndex = 4;
             this.deleteSelectedRowBtn.Text = "Delete Selected Row";
             this.deleteSelectedRowBtn.UseVisualStyleBackColor = true;
@@ -414,7 +399,6 @@
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.Visible = false;
-            this.Id.Width = 26;
             // 
             // amountDataGridViewTextBoxColumn
             // 
@@ -422,7 +406,6 @@
             this.amountDataGridViewTextBoxColumn.HeaderText = "Price";
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
             this.amountDataGridViewTextBoxColumn.ReadOnly = true;
-            this.amountDataGridViewTextBoxColumn.Width = 68;
             // 
             // monthDataGridViewTextBoxColumn
             // 
@@ -430,7 +413,6 @@
             this.monthDataGridViewTextBoxColumn.HeaderText = "Month";
             this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
             this.monthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.monthDataGridViewTextBoxColumn.Width = 77;
             // 
             // yearDataGridViewTextBoxColumn
             // 
@@ -438,7 +420,6 @@
             this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
             this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
             this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 65;
             // 
             // articleDataGridViewTextBoxColumn
             // 
@@ -446,7 +427,6 @@
             this.articleDataGridViewTextBoxColumn.HeaderText = "Article";
             this.articleDataGridViewTextBoxColumn.Name = "articleDataGridViewTextBoxColumn";
             this.articleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.articleDataGridViewTextBoxColumn.Width = 79;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
@@ -454,7 +434,6 @@
             this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryDataGridViewTextBoxColumn.Width = 101;
             // 
             // expenseBindingSource
             // 
@@ -465,6 +444,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
+            this.Controls.Add(this.dateTimePicker);
+            this.Controls.Add(this.clearTableBtn);
+            this.Controls.Add(this.fullLoadBtn);
+            this.Controls.Add(this.loadByTime);
             this.Controls.Add(this.deleteSelectedRowBtn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxNotListCount);
@@ -487,10 +470,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSum);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuPanel);
             this.Name = "ViewBy";
-            this.Size = new System.Drawing.Size(1188, 629);
-            this.menuPanel.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(981, 523);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenseBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -499,8 +480,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Button fullLoadBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource expenseBindingSource;

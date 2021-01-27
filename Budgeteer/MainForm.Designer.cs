@@ -108,27 +108,20 @@
             // 
             // addingExpense
             // 
-            this.addingExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.addingExpense.AutoScroll = true;
             this.addingExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
-            this.addingExpense.Location = new System.Drawing.Point(-4, 79);
-            this.addingExpense.Margin = new System.Windows.Forms.Padding(4);
+            this.addingExpense.Location = new System.Drawing.Point(12, 87);
             this.addingExpense.Name = "addingExpense";
-            this.addingExpense.Size = new System.Drawing.Size(1188, 629);
+            this.addingExpense.Size = new System.Drawing.Size(489, 394);
             this.addingExpense.TabIndex = 1;
             // 
             // viewBy
             // 
-            this.viewBy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.viewBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
-            this.viewBy.Location = new System.Drawing.Point(-4, 79);
+            this.viewBy.Location = new System.Drawing.Point(-8, 79);
             this.viewBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewBy.Name = "viewBy";
-            this.viewBy.Size = new System.Drawing.Size(1188, 629);
+            this.viewBy.Size = new System.Drawing.Size(1472, 633);
             this.viewBy.TabIndex = 2;
             // 
             // MainForm
@@ -137,9 +130,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1182, 705);
-            this.Controls.Add(this.titlePanel);
-            this.Controls.Add(this.addingExpense);
             this.Controls.Add(this.viewBy);
+            this.Controls.Add(this.addingExpense);
+            this.Controls.Add(this.titlePanel);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
