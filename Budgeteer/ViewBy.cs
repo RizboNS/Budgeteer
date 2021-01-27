@@ -23,6 +23,7 @@ namespace Budgeteer
             InitializeComponent();
             SetMyCustomFormat();
         }
+        #region Format Methods
         private void SetMyCustomFormat()
         {
             // Set the Format type and the CustomFormat string.
@@ -30,6 +31,7 @@ namespace Budgeteer
             dateTimePicker.CustomFormat = "MMMM/yyyy";
             dateTimePicker.ShowUpDown = true;
         }
+        #endregion
         #region Button Clicks
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -41,8 +43,11 @@ namespace Budgeteer
             LoadByMonthAndYear();
             lastExecutedCommand = "LoadByMonthAndYear";
         }
+        private void deleteSelectedRowBtn_Click(object sender, EventArgs e)
+        {
+            DeleteSelectedRow();
+        }
         #endregion
-
         #region Loading Data from DB Methods
         private void FullLoad()
         {
@@ -92,7 +97,7 @@ namespace Budgeteer
             textBoxCount.Text = displayList.Count(exp => exp.category.Equals(category)).ToString();
         }
         #endregion
-
+        #region Deletion and Clear Methods
         private void clearTableBtn_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("This action will delete all DataTable entry.",
@@ -105,8 +110,7 @@ namespace Budgeteer
                     break;
             }
         }
-
-        private void deleteSelectedRowBtn_Click(object sender, EventArgs e)
+        private void DeleteSelectedRow()
         {
             if (dataGridView1.Rows.Count > 0)
             {
@@ -123,8 +127,9 @@ namespace Budgeteer
             }
             else
             {
-                MessageBox.Show("Please select row to delete it.","Delete failed");
+                MessageBox.Show("Please select row to delete it.", "Delete failed");
             }
         }
+        #endregion
     }
 }
