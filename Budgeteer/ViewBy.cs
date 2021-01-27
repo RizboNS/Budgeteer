@@ -15,8 +15,9 @@ namespace Budgeteer
     public partial class ViewBy : UserControl
     {
         private List<Expense> displayList = new List<Expense>();
-        string month = "";
-        string year = "";
+        private string month = "";
+        private string year = "";
+        private string lastExecutedCommand = "";
         public ViewBy()
         {
             InitializeComponent();
@@ -33,10 +34,12 @@ namespace Budgeteer
         private void Button1_Click(object sender, EventArgs e)
         {
             FullLoad();
+            lastExecutedCommand = "FullLoad";
         }
         private void TestBtn_Click(object sender, EventArgs e)
         {
             LoadByMonthAndYear();
+            lastExecutedCommand = "LoadByMonthAndYear";
         }
         #endregion
 
@@ -100,6 +103,27 @@ namespace Budgeteer
                     break;
                 case DialogResult.No:
                     break;
+            }
+        }
+
+        private void deleteSelectedRowBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                string selectedId = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                SqliteDataAccess.ExecuteSql($"delete from Expense where Id='{selectedId}'");
+                if (lastExecutedCommand.Equals("FullLoad"))
+                {
+                    FullLoad();
+                }
+                else if (lastExecutedCommand.Equals("LoadByMonthAndYear"))
+                {
+                    LoadByMonthAndYear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select row to delete it.","Delete failed");
             }
         }
     }

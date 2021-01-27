@@ -35,7 +35,7 @@ namespace Budgeteer.Classes.SqliteDataAccess
             // Load from Expense DB to single value par
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                return (double)cnn.ExecuteScalar(sqlCommand, new DynamicParameters());
+                return Convert.ToDouble(cnn.ExecuteScalar(sqlCommand, new DynamicParameters()));
             }
         }
 
@@ -49,6 +49,13 @@ namespace Budgeteer.Classes.SqliteDataAccess
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute("DELETE FROM Expense");
+            }
+        }
+        public static void ExecuteSql(string sql)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute(sql);
             }
         }
     }
