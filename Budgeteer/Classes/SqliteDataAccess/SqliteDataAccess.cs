@@ -1,13 +1,10 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
 using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
-using Budgeteer.Classes.Expense;
+using System.Linq;
 
 namespace Budgeteer.Classes.SqliteDataAccess
 {
