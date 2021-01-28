@@ -26,5 +26,10 @@ namespace Budgeteer
         {
             viewBy.BringToFront();
         }
+
+        private void aboutBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Need to add about component");
+        }
     }
 }
