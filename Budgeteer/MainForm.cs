@@ -29,7 +29,8 @@ namespace Budgeteer
 
         private void aboutBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Need to add about component");
+            Form aboutForm = new AboutBox();
+            aboutForm.Show();
         }
     }
 }
