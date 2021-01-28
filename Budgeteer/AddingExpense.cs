@@ -15,7 +15,6 @@ namespace Budgeteer
     public partial class AddingExpense : UserControl
     {
         private string category = "Not Listed";
-        private string article = "Not Listed";
         private List<string> listBoxValues = new List<string>();
         private bool parseToDouble = false;
         private double amount;
@@ -52,7 +51,7 @@ namespace Budgeteer
             Expense expense = new Expense
             {
                 amount = amount,
-                article = article,
+                article = CapitilzeFirtLeter(itemTextBox.Text),
                 month = dateTimePicker.Value.Date.ToString("MMMM"),
                 year = dateTimePicker.Value.Date.ToString("yyyy"),
                 category = category
@@ -64,10 +63,19 @@ namespace Budgeteer
 
             return expense;
         }
+        private string CapitilzeFirtLeter(string input)
+        {
+            if (!string.IsNullOrEmpty(input))
+            {
+                return input[0].ToString().ToUpper() + input.Substring(1);
+            }
+            return "Not listed";
+        }
         private void ClearInputBoxes()
         {
             // Clear boxes so it is ready for next input.
             amountTxt.Clear();
+            itemTextBox.Clear();
             quantityTxtBox.Text = "1";
         }
         private void SubmitBtn_Click(object sender, EventArgs e)
@@ -88,11 +96,10 @@ namespace Budgeteer
             }
         }
 
-        private void SetCategoryAndArticle(string ctg, string artc)
+        private void SetCategoryAndArticle(string ctg)
         {
             category = ctg;
-            article = artc;
-            menuBtn.Text = artc;
+            menuBtn.Text = ctg;
         }
         private void ShowMenu(ContextMenuStrip menu, Button btn)
         {
@@ -105,91 +112,73 @@ namespace Budgeteer
         #region Menu Buttons Clicks
         private void categoryMenuNotListedBtn_Click(object sender, EventArgs e)
         {
-            SetCategoryAndArticle("Not Listed","Not Listed");
+            SetCategoryAndArticle("Not Listed");
         }
-        #region Utility
-        private void electricityToolStripMenuItem_Click(object sender, EventArgs e)
+        private void categoryMenuUtilBtn_Click(object sender, EventArgs e)
         {
-            SetCategoryAndArticle("Utility", "Electricity");
-        }
-
-        private void waterGarbageEtcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Utility", "Water and Garbage etc.");
+            SetCategoryAndArticle("Utility");
         }
 
-        private void cableAndInternetToolStripMenuItem_Click(object sender, EventArgs e)
+        private void categoryMenuFood_Click(object sender, EventArgs e)
         {
-            SetCategoryAndArticle("Utility", "Cable and Internet");
+            SetCategoryAndArticle("Food");
         }
 
-        private void phoneToolStripMenuItem_Click(object sender, EventArgs e)
+        private void categoryMenuTransportationBtn_Click(object sender, EventArgs e)
         {
-            SetCategoryAndArticle("Utility", "Phone");
+            SetCategoryAndArticle("Transport");
+        }
+
+        private void categoryMenuKitchenProducts_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Kitchen products");
+        }
+
+        private void categoryMenuBodyFaceCare_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Body Hair Face care");
+        }
+
+        private void categoryMenuWardrobe_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Wardrobe");
+        }
+
+        private void categoryMenuLaundryProducts_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Laundry products");
+        }
+
+        private void categoryMenuBabyCare_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Baby");
+        }
+
+        private void categoryMenuKids_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Kids");
+        }
+
+        private void categoryMenuPets_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Pets");
+        }
+
+        private void categoryMenuGarden_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Garden");
+        }
+
+        private void categoryMenuPharmacy_Click(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Pharmacy");
         }
         #endregion
-        #region Food
-        private void milkToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Food", "Milk");
-        }
 
-        private void breadToolStripMenuItem_Click(object sender, EventArgs e)
+        private void clearBoxBtn_Click(object sender, EventArgs e)
         {
-            SetCategoryAndArticle("Food", "Bread");
+            listBoxValues.Clear();
+            listBoxAddedValues.DataSource = null;
         }
-
-        private void sunflowerOilToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Food", "Sunflower Oil");
-        }
-
-        private void oliveOilToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Food", "Olive Oil");
-        }
-
-        private void vegOilToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Food", "Veg Oil");
-        }
-
-        private void dogFoodToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Food", "Dog Food");
-        }
-
-        private void sugarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Food", "Sugar");
-        }
-
-        private void wheatFlowerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Food", "Wheat Flower");
-        }
-
-        private void cornFlowerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Food", "Corn Flower");
-        }
-        #endregion
-        #region Transportation
-        private void gasolineToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Transportation", "Gasoline");
-        }
-
-        private void busFareToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Transportation", "Bus Fare");
-        }
-
-        private void otherToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SetCategoryAndArticle("Transportation", "Other");
-        }
-        #endregion
-        #endregion
     }
 }

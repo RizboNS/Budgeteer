@@ -73,37 +73,39 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(212, 420);
+            this.dateTimePicker.Location = new System.Drawing.Point(623, 20);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker.TabIndex = 2;
+            this.dateTimePicker.TabIndex = 0;
             // 
             // loadByTime
             // 
+            this.loadByTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
             this.loadByTime.FlatAppearance.BorderSize = 0;
             this.loadByTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loadByTime.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadByTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadByTime.ForeColor = System.Drawing.Color.White;
-            this.loadByTime.Location = new System.Drawing.Point(212, 459);
+            this.loadByTime.Location = new System.Drawing.Point(633, 46);
             this.loadByTime.Name = "loadByTime";
-            this.loadByTime.Size = new System.Drawing.Size(203, 61);
-            this.loadByTime.TabIndex = 1;
+            this.loadByTime.Size = new System.Drawing.Size(179, 28);
+            this.loadByTime.TabIndex = 2;
             this.loadByTime.Text = "Load Table by Month";
-            this.loadByTime.UseVisualStyleBackColor = true;
+            this.loadByTime.UseVisualStyleBackColor = false;
             this.loadByTime.Click += new System.EventHandler(this.TestBtn_Click);
             // 
             // fullLoadBtn
             // 
+            this.fullLoadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
             this.fullLoadBtn.FlatAppearance.BorderSize = 0;
             this.fullLoadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fullLoadBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullLoadBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullLoadBtn.ForeColor = System.Drawing.Color.White;
-            this.fullLoadBtn.Location = new System.Drawing.Point(421, 459);
+            this.fullLoadBtn.Location = new System.Drawing.Point(488, 46);
             this.fullLoadBtn.Name = "fullLoadBtn";
-            this.fullLoadBtn.Size = new System.Drawing.Size(203, 61);
-            this.fullLoadBtn.TabIndex = 0;
+            this.fullLoadBtn.Size = new System.Drawing.Size(139, 28);
+            this.fullLoadBtn.TabIndex = 1;
             this.fullLoadBtn.Text = "Full Load";
-            this.fullLoadBtn.UseVisualStyleBackColor = true;
+            this.fullLoadBtn.UseVisualStyleBackColor = false;
             this.fullLoadBtn.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dataGridView1
@@ -152,7 +154,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
-            this.dataGridView1.Location = new System.Drawing.Point(487, 56);
+            this.dataGridView1.Location = new System.Drawing.Point(488, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -173,224 +175,240 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(470, 292);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 3;
             // 
             // textBoxSum
             // 
-            this.textBoxSum.Location = new System.Drawing.Point(487, 372);
+            this.textBoxSum.Location = new System.Drawing.Point(488, 396);
             this.textBoxSum.Name = "textBoxSum";
             this.textBoxSum.ReadOnly = true;
             this.textBoxSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxSum.TabIndex = 2;
+            this.textBoxSum.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(553, 374);
+            this.label1.Location = new System.Drawing.Point(554, 398);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(63, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Total Sum";
+            this.label1.Text = "Total sum";
             // 
             // textBoxCount
             // 
-            this.textBoxCount.Location = new System.Drawing.Point(487, 396);
+            this.textBoxCount.Location = new System.Drawing.Point(488, 420);
             this.textBoxCount.Name = "textBoxCount";
             this.textBoxCount.ReadOnly = true;
             this.textBoxCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxCount.TabIndex = 4;
+            this.textBoxCount.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(553, 400);
+            this.label2.Location = new System.Drawing.Point(554, 424);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.Size = new System.Drawing.Size(40, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Items Count";
+            this.label2.Text = "Items";
             // 
             // textBoxUtilitySum
             // 
-            this.textBoxUtilitySum.Location = new System.Drawing.Point(645, 372);
+            this.textBoxUtilitySum.Location = new System.Drawing.Point(646, 396);
             this.textBoxUtilitySum.Name = "textBoxUtilitySum";
             this.textBoxUtilitySum.ReadOnly = true;
             this.textBoxUtilitySum.Size = new System.Drawing.Size(60, 20);
             this.textBoxUtilitySum.TabIndex = 6;
+            this.textBoxUtilitySum.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(711, 374);
+            this.label3.Location = new System.Drawing.Point(712, 398);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Sum Utility";
+            this.label3.Text = "Utility sum";
             // 
             // textBoxUtilityCount
             // 
-            this.textBoxUtilityCount.Location = new System.Drawing.Point(645, 396);
+            this.textBoxUtilityCount.Location = new System.Drawing.Point(646, 420);
             this.textBoxUtilityCount.Name = "textBoxUtilityCount";
             this.textBoxUtilityCount.ReadOnly = true;
             this.textBoxUtilityCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxUtilityCount.TabIndex = 8;
+            this.textBoxUtilityCount.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(711, 398);
+            this.label4.Location = new System.Drawing.Point(712, 422);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
+            this.label4.Size = new System.Drawing.Size(40, 17);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Items Count";
+            this.label4.Text = "Items";
             // 
             // textBoxFoodSum
             // 
-            this.textBoxFoodSum.Location = new System.Drawing.Point(645, 434);
+            this.textBoxFoodSum.Location = new System.Drawing.Point(646, 458);
             this.textBoxFoodSum.Name = "textBoxFoodSum";
             this.textBoxFoodSum.ReadOnly = true;
             this.textBoxFoodSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxFoodSum.TabIndex = 10;
+            this.textBoxFoodSum.TabStop = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(711, 436);
+            this.label6.Location = new System.Drawing.Point(712, 460);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 16);
+            this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Sum Food";
+            this.label6.Text = "Food sum";
             // 
             // textBoxFoodCount
             // 
-            this.textBoxFoodCount.Location = new System.Drawing.Point(645, 457);
+            this.textBoxFoodCount.Location = new System.Drawing.Point(646, 481);
             this.textBoxFoodCount.Name = "textBoxFoodCount";
             this.textBoxFoodCount.ReadOnly = true;
             this.textBoxFoodCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxFoodCount.TabIndex = 12;
+            this.textBoxFoodCount.TabStop = false;
             // 
             // labelItemsCount
             // 
             this.labelItemsCount.AutoSize = true;
-            this.labelItemsCount.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelItemsCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelItemsCount.ForeColor = System.Drawing.Color.White;
-            this.labelItemsCount.Location = new System.Drawing.Point(710, 457);
+            this.labelItemsCount.Location = new System.Drawing.Point(711, 481);
             this.labelItemsCount.Name = "labelItemsCount";
-            this.labelItemsCount.Size = new System.Drawing.Size(73, 16);
+            this.labelItemsCount.Size = new System.Drawing.Size(40, 17);
             this.labelItemsCount.TabIndex = 13;
-            this.labelItemsCount.Text = "Items Count";
+            this.labelItemsCount.Text = "Items";
             // 
             // textBoxTranspSum
             // 
-            this.textBoxTranspSum.Location = new System.Drawing.Point(788, 372);
+            this.textBoxTranspSum.Location = new System.Drawing.Point(789, 396);
             this.textBoxTranspSum.Name = "textBoxTranspSum";
             this.textBoxTranspSum.ReadOnly = true;
             this.textBoxTranspSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxTranspSum.TabIndex = 14;
+            this.textBoxTranspSum.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(855, 376);
+            this.label7.Location = new System.Drawing.Point(855, 396);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 16);
+            this.label7.Size = new System.Drawing.Size(119, 17);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Sum Transportation";
+            this.label7.Text = "Transportation sum";
             // 
             // textBoxTranspCount
             // 
-            this.textBoxTranspCount.Location = new System.Drawing.Point(788, 394);
+            this.textBoxTranspCount.Location = new System.Drawing.Point(789, 418);
             this.textBoxTranspCount.Name = "textBoxTranspCount";
             this.textBoxTranspCount.ReadOnly = true;
             this.textBoxTranspCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxTranspCount.TabIndex = 16;
+            this.textBoxTranspCount.TabStop = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(854, 398);
+            this.label5.Location = new System.Drawing.Point(855, 418);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.Size = new System.Drawing.Size(40, 17);
             this.label5.TabIndex = 17;
-            this.label5.Text = "Items Count";
+            this.label5.Text = "Items";
             // 
             // textBoxNotListSum
             // 
-            this.textBoxNotListSum.Location = new System.Drawing.Point(788, 434);
+            this.textBoxNotListSum.Location = new System.Drawing.Point(789, 458);
             this.textBoxNotListSum.Name = "textBoxNotListSum";
             this.textBoxNotListSum.ReadOnly = true;
             this.textBoxNotListSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxNotListSum.TabIndex = 18;
+            this.textBoxNotListSum.TabStop = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(852, 434);
+            this.label9.Location = new System.Drawing.Point(853, 458);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 16);
+            this.label9.Size = new System.Drawing.Size(94, 17);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Sum Not listed";
+            this.label9.Text = "Not Listed sum";
             // 
             // textBoxNotListCount
             // 
-            this.textBoxNotListCount.Location = new System.Drawing.Point(788, 457);
+            this.textBoxNotListCount.Location = new System.Drawing.Point(789, 481);
             this.textBoxNotListCount.Name = "textBoxNotListCount";
             this.textBoxNotListCount.ReadOnly = true;
             this.textBoxNotListCount.Size = new System.Drawing.Size(60, 20);
             this.textBoxNotListCount.TabIndex = 20;
+            this.textBoxNotListCount.TabStop = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(854, 457);
+            this.label8.Location = new System.Drawing.Point(855, 481);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 16);
+            this.label8.Size = new System.Drawing.Size(40, 17);
             this.label8.TabIndex = 21;
-            this.label8.Text = "Items Count";
+            this.label8.Text = "Items";
             // 
             // clearTableBtn
             // 
+            this.clearTableBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
             this.clearTableBtn.FlatAppearance.BorderSize = 0;
+            this.clearTableBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.clearTableBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.clearTableBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearTableBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearTableBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearTableBtn.ForeColor = System.Drawing.Color.White;
-            this.clearTableBtn.Location = new System.Drawing.Point(3, 459);
+            this.clearTableBtn.Location = new System.Drawing.Point(488, 469);
             this.clearTableBtn.Name = "clearTableBtn";
-            this.clearTableBtn.Size = new System.Drawing.Size(203, 61);
-            this.clearTableBtn.TabIndex = 3;
-            this.clearTableBtn.Text = "Delete all data";
-            this.clearTableBtn.UseVisualStyleBackColor = true;
+            this.clearTableBtn.Size = new System.Drawing.Size(126, 28);
+            this.clearTableBtn.TabIndex = 6;
+            this.clearTableBtn.TabStop = false;
+            this.clearTableBtn.Text = "Delete all";
+            this.clearTableBtn.UseVisualStyleBackColor = false;
             this.clearTableBtn.Click += new System.EventHandler(this.clearTableBtn_Click);
             // 
             // deleteSelectedRowBtn
             // 
+            this.deleteSelectedRowBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
             this.deleteSelectedRowBtn.FlatAppearance.BorderSize = 0;
             this.deleteSelectedRowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteSelectedRowBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteSelectedRowBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteSelectedRowBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteSelectedRowBtn.Location = new System.Drawing.Point(487, 7);
+            this.deleteSelectedRowBtn.Location = new System.Drawing.Point(818, 46);
             this.deleteSelectedRowBtn.Name = "deleteSelectedRowBtn";
-            this.deleteSelectedRowBtn.Size = new System.Drawing.Size(470, 43);
+            this.deleteSelectedRowBtn.Size = new System.Drawing.Size(140, 28);
             this.deleteSelectedRowBtn.TabIndex = 4;
+            this.deleteSelectedRowBtn.TabStop = false;
             this.deleteSelectedRowBtn.Text = "Delete Selected Row";
-            this.deleteSelectedRowBtn.UseVisualStyleBackColor = true;
+            this.deleteSelectedRowBtn.UseVisualStyleBackColor = false;
             this.deleteSelectedRowBtn.Click += new System.EventHandler(this.deleteSelectedRowBtn_Click);
             // 
             // Id

@@ -39,27 +39,21 @@
             this.quantityTxtBox = new System.Windows.Forms.TextBox();
             this.categoryMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.categoryMenuUtilBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.electricityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.waterGarbageEtcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cableAndInternetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryMenuFood = new System.Windows.Forms.ToolStripMenuItem();
-            this.milkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.breadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vegOilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sunflowerOilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oliveOilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vegOilToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dogFoodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sugarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.wheatFlowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cornFlowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryMenuTransportationBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.gasolineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.busFareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuKitchenProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuBodyFaceCare = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuWardrobe = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryMenuNotListedBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuLaundryProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuBabyCare = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuKids = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuPets = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuGarden = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryMenuPharmacy = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.clearBoxBtn = new System.Windows.Forms.Button();
             this.categoryMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +83,7 @@
             this.dateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
             this.dateTimePicker.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(164)))));
             this.dateTimePicker.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(294, 16);
+            this.dateTimePicker.Location = new System.Drawing.Point(369, 12);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(154, 21);
             this.dateTimePicker.TabIndex = 1;
@@ -103,7 +97,7 @@
             this.SubmitBtn.ForeColor = System.Drawing.Color.White;
             this.SubmitBtn.Location = new System.Drawing.Point(17, 84);
             this.SubmitBtn.Name = "SubmitBtn";
-            this.SubmitBtn.Size = new System.Drawing.Size(431, 39);
+            this.SubmitBtn.Size = new System.Drawing.Size(506, 39);
             this.SubmitBtn.TabIndex = 4;
             this.SubmitBtn.Text = "Submit Expense";
             this.SubmitBtn.UseVisualStyleBackColor = false;
@@ -116,11 +110,11 @@
             this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBtn.ForeColor = System.Drawing.Color.White;
-            this.menuBtn.Location = new System.Drawing.Point(17, 42);
+            this.menuBtn.Location = new System.Drawing.Point(17, 48);
             this.menuBtn.Name = "menuBtn";
             this.menuBtn.Size = new System.Drawing.Size(200, 26);
             this.menuBtn.TabIndex = 2;
-            this.menuBtn.Text = "Item";
+            this.menuBtn.Text = "Category";
             this.menuBtn.UseVisualStyleBackColor = false;
             this.menuBtn.Click += new System.EventHandler(this.CategoryMenuBtn_Click);
             this.menuBtn.Enter += new System.EventHandler(this.CategoryMenuBtn_Click);
@@ -130,9 +124,9 @@
             this.listBoxAddedValues.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxAddedValues.FormattingEnabled = true;
             this.listBoxAddedValues.ItemHeight = 17;
-            this.listBoxAddedValues.Location = new System.Drawing.Point(17, 139);
+            this.listBoxAddedValues.Location = new System.Drawing.Point(17, 143);
             this.listBoxAddedValues.Name = "listBoxAddedValues";
-            this.listBoxAddedValues.Size = new System.Drawing.Size(431, 208);
+            this.listBoxAddedValues.Size = new System.Drawing.Size(505, 361);
             this.listBoxAddedValues.TabIndex = 7;
             this.listBoxAddedValues.TabStop = false;
             // 
@@ -141,7 +135,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(264, 48);
+            this.label3.Location = new System.Drawing.Point(269, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 6;
@@ -150,7 +144,7 @@
             // quantityTxtBox
             // 
             this.quantityTxtBox.BackColor = System.Drawing.Color.White;
-            this.quantityTxtBox.Location = new System.Drawing.Point(228, 46);
+            this.quantityTxtBox.Location = new System.Drawing.Point(233, 52);
             this.quantityTxtBox.Name = "quantityTxtBox";
             this.quantityTxtBox.Size = new System.Drawing.Size(30, 20);
             this.quantityTxtBox.TabIndex = 3;
@@ -164,187 +158,153 @@
             this.categoryMenuUtilBtn,
             this.categoryMenuFood,
             this.categoryMenuTransportationBtn,
+            this.categoryMenuKitchenProducts,
+            this.categoryMenuBodyFaceCare,
+            this.categoryMenuWardrobe,
+            this.categoryMenuLaundryProducts,
+            this.categoryMenuBabyCare,
+            this.categoryMenuKids,
+            this.categoryMenuPets,
+            this.categoryMenuGarden,
+            this.categoryMenuPharmacy,
             this.categoryMenuNotListedBtn});
             this.categoryMenu.Name = "categoryMenu";
-            this.categoryMenu.Size = new System.Drawing.Size(162, 92);
+            this.categoryMenu.Size = new System.Drawing.Size(222, 290);
             // 
             // categoryMenuUtilBtn
             // 
-            this.categoryMenuUtilBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.electricityToolStripMenuItem,
-            this.waterGarbageEtcToolStripMenuItem,
-            this.cableAndInternetToolStripMenuItem,
-            this.phoneToolStripMenuItem});
             this.categoryMenuUtilBtn.Name = "categoryMenuUtilBtn";
-            this.categoryMenuUtilBtn.Size = new System.Drawing.Size(161, 22);
+            this.categoryMenuUtilBtn.Size = new System.Drawing.Size(221, 22);
             this.categoryMenuUtilBtn.Text = "Utility";
-            // 
-            // electricityToolStripMenuItem
-            // 
-            this.electricityToolStripMenuItem.Name = "electricityToolStripMenuItem";
-            this.electricityToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.electricityToolStripMenuItem.Text = "Electricity";
-            this.electricityToolStripMenuItem.Click += new System.EventHandler(this.electricityToolStripMenuItem_Click);
-            // 
-            // waterGarbageEtcToolStripMenuItem
-            // 
-            this.waterGarbageEtcToolStripMenuItem.Name = "waterGarbageEtcToolStripMenuItem";
-            this.waterGarbageEtcToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.waterGarbageEtcToolStripMenuItem.Text = "Water Garbage etc.";
-            this.waterGarbageEtcToolStripMenuItem.Click += new System.EventHandler(this.waterGarbageEtcToolStripMenuItem_Click);
-            // 
-            // cableAndInternetToolStripMenuItem
-            // 
-            this.cableAndInternetToolStripMenuItem.Name = "cableAndInternetToolStripMenuItem";
-            this.cableAndInternetToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.cableAndInternetToolStripMenuItem.Text = "Cable and Internet";
-            this.cableAndInternetToolStripMenuItem.Click += new System.EventHandler(this.cableAndInternetToolStripMenuItem_Click);
-            // 
-            // phoneToolStripMenuItem
-            // 
-            this.phoneToolStripMenuItem.Name = "phoneToolStripMenuItem";
-            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.phoneToolStripMenuItem.Text = "Phone";
-            this.phoneToolStripMenuItem.Click += new System.EventHandler(this.phoneToolStripMenuItem_Click);
+            this.categoryMenuUtilBtn.Click += new System.EventHandler(this.categoryMenuUtilBtn_Click);
             // 
             // categoryMenuFood
             // 
-            this.categoryMenuFood.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.milkToolStripMenuItem,
-            this.breadToolStripMenuItem,
-            this.vegOilToolStripMenuItem,
-            this.dogFoodToolStripMenuItem,
-            this.sugarToolStripMenuItem,
-            this.flowerToolStripMenuItem});
             this.categoryMenuFood.Name = "categoryMenuFood";
-            this.categoryMenuFood.Size = new System.Drawing.Size(161, 22);
+            this.categoryMenuFood.Size = new System.Drawing.Size(221, 22);
             this.categoryMenuFood.Text = "Food";
-            // 
-            // milkToolStripMenuItem
-            // 
-            this.milkToolStripMenuItem.Name = "milkToolStripMenuItem";
-            this.milkToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.milkToolStripMenuItem.Text = "Milk";
-            this.milkToolStripMenuItem.Click += new System.EventHandler(this.milkToolStripMenuItem_Click);
-            // 
-            // breadToolStripMenuItem
-            // 
-            this.breadToolStripMenuItem.Name = "breadToolStripMenuItem";
-            this.breadToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.breadToolStripMenuItem.Text = "Bread";
-            this.breadToolStripMenuItem.Click += new System.EventHandler(this.breadToolStripMenuItem_Click);
-            // 
-            // vegOilToolStripMenuItem
-            // 
-            this.vegOilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sunflowerOilToolStripMenuItem,
-            this.oliveOilToolStripMenuItem,
-            this.vegOilToolStripMenuItem1});
-            this.vegOilToolStripMenuItem.Name = "vegOilToolStripMenuItem";
-            this.vegOilToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.vegOilToolStripMenuItem.Text = "Oil";
-            // 
-            // sunflowerOilToolStripMenuItem
-            // 
-            this.sunflowerOilToolStripMenuItem.Name = "sunflowerOilToolStripMenuItem";
-            this.sunflowerOilToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.sunflowerOilToolStripMenuItem.Text = "Sunflower Oil";
-            this.sunflowerOilToolStripMenuItem.Click += new System.EventHandler(this.sunflowerOilToolStripMenuItem_Click);
-            // 
-            // oliveOilToolStripMenuItem
-            // 
-            this.oliveOilToolStripMenuItem.Name = "oliveOilToolStripMenuItem";
-            this.oliveOilToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.oliveOilToolStripMenuItem.Text = "Olive Oil";
-            this.oliveOilToolStripMenuItem.Click += new System.EventHandler(this.oliveOilToolStripMenuItem_Click);
-            // 
-            // vegOilToolStripMenuItem1
-            // 
-            this.vegOilToolStripMenuItem1.Name = "vegOilToolStripMenuItem1";
-            this.vegOilToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
-            this.vegOilToolStripMenuItem1.Text = "Veg Oil";
-            this.vegOilToolStripMenuItem1.Click += new System.EventHandler(this.vegOilToolStripMenuItem1_Click);
-            // 
-            // dogFoodToolStripMenuItem
-            // 
-            this.dogFoodToolStripMenuItem.Name = "dogFoodToolStripMenuItem";
-            this.dogFoodToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.dogFoodToolStripMenuItem.Text = "Dog Food";
-            this.dogFoodToolStripMenuItem.Click += new System.EventHandler(this.dogFoodToolStripMenuItem_Click);
-            // 
-            // sugarToolStripMenuItem
-            // 
-            this.sugarToolStripMenuItem.Name = "sugarToolStripMenuItem";
-            this.sugarToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.sugarToolStripMenuItem.Text = "Sugar";
-            this.sugarToolStripMenuItem.Click += new System.EventHandler(this.sugarToolStripMenuItem_Click);
-            // 
-            // flowerToolStripMenuItem
-            // 
-            this.flowerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.wheatFlowerToolStripMenuItem,
-            this.cornFlowerToolStripMenuItem});
-            this.flowerToolStripMenuItem.Name = "flowerToolStripMenuItem";
-            this.flowerToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.flowerToolStripMenuItem.Text = "Flower";
-            // 
-            // wheatFlowerToolStripMenuItem
-            // 
-            this.wheatFlowerToolStripMenuItem.Name = "wheatFlowerToolStripMenuItem";
-            this.wheatFlowerToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.wheatFlowerToolStripMenuItem.Text = "Wheat Flower";
-            this.wheatFlowerToolStripMenuItem.Click += new System.EventHandler(this.wheatFlowerToolStripMenuItem_Click);
-            // 
-            // cornFlowerToolStripMenuItem
-            // 
-            this.cornFlowerToolStripMenuItem.Name = "cornFlowerToolStripMenuItem";
-            this.cornFlowerToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.cornFlowerToolStripMenuItem.Text = "Corn Flower";
-            this.cornFlowerToolStripMenuItem.Click += new System.EventHandler(this.cornFlowerToolStripMenuItem_Click);
+            this.categoryMenuFood.Click += new System.EventHandler(this.categoryMenuFood_Click);
             // 
             // categoryMenuTransportationBtn
             // 
-            this.categoryMenuTransportationBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gasolineToolStripMenuItem,
-            this.busFareToolStripMenuItem,
-            this.otherToolStripMenuItem});
             this.categoryMenuTransportationBtn.Name = "categoryMenuTransportationBtn";
-            this.categoryMenuTransportationBtn.Size = new System.Drawing.Size(161, 22);
+            this.categoryMenuTransportationBtn.Size = new System.Drawing.Size(221, 22);
             this.categoryMenuTransportationBtn.Text = "Transportation";
+            this.categoryMenuTransportationBtn.Click += new System.EventHandler(this.categoryMenuTransportationBtn_Click);
             // 
-            // gasolineToolStripMenuItem
+            // categoryMenuKitchenProducts
             // 
-            this.gasolineToolStripMenuItem.Name = "gasolineToolStripMenuItem";
-            this.gasolineToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.gasolineToolStripMenuItem.Text = "Gasoline";
-            this.gasolineToolStripMenuItem.Click += new System.EventHandler(this.gasolineToolStripMenuItem_Click);
+            this.categoryMenuKitchenProducts.Name = "categoryMenuKitchenProducts";
+            this.categoryMenuKitchenProducts.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuKitchenProducts.Text = "Kitchen products";
+            this.categoryMenuKitchenProducts.Click += new System.EventHandler(this.categoryMenuKitchenProducts_Click);
             // 
-            // busFareToolStripMenuItem
+            // categoryMenuBodyFaceCare
             // 
-            this.busFareToolStripMenuItem.Name = "busFareToolStripMenuItem";
-            this.busFareToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.busFareToolStripMenuItem.Text = "Bus Fare";
-            this.busFareToolStripMenuItem.Click += new System.EventHandler(this.busFareToolStripMenuItem_Click);
+            this.categoryMenuBodyFaceCare.Name = "categoryMenuBodyFaceCare";
+            this.categoryMenuBodyFaceCare.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuBodyFaceCare.Text = "Body Hair and Face care";
+            this.categoryMenuBodyFaceCare.Click += new System.EventHandler(this.categoryMenuBodyFaceCare_Click);
             // 
-            // otherToolStripMenuItem
+            // categoryMenuWardrobe
             // 
-            this.otherToolStripMenuItem.Name = "otherToolStripMenuItem";
-            this.otherToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.otherToolStripMenuItem.Text = "Other";
-            this.otherToolStripMenuItem.Click += new System.EventHandler(this.otherToolStripMenuItem_Click);
+            this.categoryMenuWardrobe.Name = "categoryMenuWardrobe";
+            this.categoryMenuWardrobe.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuWardrobe.Text = "Wardrobe";
+            this.categoryMenuWardrobe.Click += new System.EventHandler(this.categoryMenuWardrobe_Click);
             // 
             // categoryMenuNotListedBtn
             // 
             this.categoryMenuNotListedBtn.Name = "categoryMenuNotListedBtn";
-            this.categoryMenuNotListedBtn.Size = new System.Drawing.Size(161, 22);
+            this.categoryMenuNotListedBtn.Size = new System.Drawing.Size(221, 22);
             this.categoryMenuNotListedBtn.Text = "Not Listed";
             this.categoryMenuNotListedBtn.Click += new System.EventHandler(this.categoryMenuNotListedBtn_Click);
+            // 
+            // categoryMenuLaundryProducts
+            // 
+            this.categoryMenuLaundryProducts.Name = "categoryMenuLaundryProducts";
+            this.categoryMenuLaundryProducts.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuLaundryProducts.Text = "Laundry products";
+            this.categoryMenuLaundryProducts.Click += new System.EventHandler(this.categoryMenuLaundryProducts_Click);
+            // 
+            // categoryMenuBabyCare
+            // 
+            this.categoryMenuBabyCare.Name = "categoryMenuBabyCare";
+            this.categoryMenuBabyCare.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuBabyCare.Text = "Baby Care";
+            this.categoryMenuBabyCare.Click += new System.EventHandler(this.categoryMenuBabyCare_Click);
+            // 
+            // categoryMenuKids
+            // 
+            this.categoryMenuKids.Name = "categoryMenuKids";
+            this.categoryMenuKids.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuKids.Text = "Kids";
+            this.categoryMenuKids.Click += new System.EventHandler(this.categoryMenuKids_Click);
+            // 
+            // categoryMenuPets
+            // 
+            this.categoryMenuPets.Name = "categoryMenuPets";
+            this.categoryMenuPets.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuPets.Text = "Pets";
+            this.categoryMenuPets.Click += new System.EventHandler(this.categoryMenuPets_Click);
+            // 
+            // categoryMenuGarden
+            // 
+            this.categoryMenuGarden.Name = "categoryMenuGarden";
+            this.categoryMenuGarden.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuGarden.Text = "Garden";
+            this.categoryMenuGarden.Click += new System.EventHandler(this.categoryMenuGarden_Click);
+            // 
+            // categoryMenuPharmacy
+            // 
+            this.categoryMenuPharmacy.Name = "categoryMenuPharmacy";
+            this.categoryMenuPharmacy.Size = new System.Drawing.Size(221, 22);
+            this.categoryMenuPharmacy.Text = "Pharmacy";
+            this.categoryMenuPharmacy.Click += new System.EventHandler(this.categoryMenuPharmacy_Click);
+            // 
+            // itemTextBox
+            // 
+            this.itemTextBox.BackColor = System.Drawing.Color.White;
+            this.itemTextBox.Location = new System.Drawing.Point(175, 16);
+            this.itemTextBox.Name = "itemTextBox";
+            this.itemTextBox.Size = new System.Drawing.Size(112, 20);
+            this.itemTextBox.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(293, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Article";
+            // 
+            // clearBoxBtn
+            // 
+            this.clearBoxBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(67)))), ((int)(((byte)(20)))));
+            this.clearBoxBtn.FlatAppearance.BorderSize = 0;
+            this.clearBoxBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearBoxBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearBoxBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBoxBtn.Location = new System.Drawing.Point(369, 510);
+            this.clearBoxBtn.Name = "clearBoxBtn";
+            this.clearBoxBtn.Size = new System.Drawing.Size(153, 26);
+            this.clearBoxBtn.TabIndex = 10;
+            this.clearBoxBtn.Text = "Clear Box";
+            this.clearBoxBtn.UseVisualStyleBackColor = false;
+            this.clearBoxBtn.Click += new System.EventHandler(this.clearBoxBtn_Click);
             // 
             // AddingExpense
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(26)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.clearBoxBtn);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.itemTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.quantityTxtBox);
             this.Controls.Add(this.listBoxAddedValues);
@@ -354,7 +314,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.amountTxt);
             this.Name = "AddingExpense";
-            this.Size = new System.Drawing.Size(489, 394);
+            this.Size = new System.Drawing.Size(540, 542);
             this.categoryMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -376,23 +336,17 @@
         private System.Windows.Forms.ToolStripMenuItem categoryMenuFood;
         private System.Windows.Forms.ToolStripMenuItem categoryMenuNotListedBtn;
         private System.Windows.Forms.ToolStripMenuItem categoryMenuTransportationBtn;
-        private System.Windows.Forms.ToolStripMenuItem electricityToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem waterGarbageEtcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cableAndInternetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phoneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem milkToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem breadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vegOilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sunflowerOilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem oliveOilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vegOilToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem dogFoodToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sugarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem flowerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem wheatFlowerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cornFlowerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gasolineToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem busFareToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem otherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuKitchenProducts;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuBodyFaceCare;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuWardrobe;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuLaundryProducts;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuBabyCare;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuKids;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuPets;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuGarden;
+        private System.Windows.Forms.ToolStripMenuItem categoryMenuPharmacy;
+        private System.Windows.Forms.TextBox itemTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button clearBoxBtn;
     }
 }

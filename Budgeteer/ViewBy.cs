@@ -31,6 +31,11 @@ namespace Budgeteer
             dateTimePicker.CustomFormat = "MMMM/yyyy";
             dateTimePicker.ShowUpDown = true;
         }
+        protected override bool ProcessTabKey(bool forward)
+        {
+            // For tab to stay in user control.
+            return SelectNextControl(ActiveControl, true, true, true, true);
+        }
         #endregion
         #region Button Clicks
         private void Button1_Click(object sender, EventArgs e)
