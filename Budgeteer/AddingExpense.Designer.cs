@@ -145,6 +145,7 @@
             // 
             this.quantityTxtBox.BackColor = System.Drawing.Color.White;
             this.quantityTxtBox.Location = new System.Drawing.Point(233, 52);
+            this.quantityTxtBox.MaxLength = 2;
             this.quantityTxtBox.Name = "quantityTxtBox";
             this.quantityTxtBox.Size = new System.Drawing.Size(30, 20);
             this.quantityTxtBox.TabIndex = 3;
@@ -266,6 +267,7 @@
             // 
             this.itemTextBox.BackColor = System.Drawing.Color.White;
             this.itemTextBox.Location = new System.Drawing.Point(175, 16);
+            this.itemTextBox.MaxLength = 32;
             this.itemTextBox.Name = "itemTextBox";
             this.itemTextBox.Size = new System.Drawing.Size(112, 20);
             this.itemTextBox.TabIndex = 8;

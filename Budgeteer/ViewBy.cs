@@ -18,6 +18,8 @@ namespace Budgeteer
         private string month = "";
         private string year = "";
         private string lastExecutedCommand = "";
+        private string category = "";
+        private bool categorySelected = false;
         public ViewBy()
         {
             InitializeComponent();
@@ -57,49 +59,54 @@ namespace Budgeteer
         private void FullLoad()
         {
             //  Load whole table from DB and load values like sum count etc.
-            displayList = SqliteDataAccess.LoadFromDbToList("select * from Expense");
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = displayList;
+            if (!categorySelected)
+            {
+                displayList = SqliteDataAccess.LoadFromDbToList("select * from Expense");
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = displayList;
 
-            double sum = SqliteDataAccess.LoadFromDbToDouble("SELECT sum(Amount) FROM Expense");
-            textBoxSum.Text = sum.ToString();
-            textBoxCount.Text = displayList.Count().ToString();
+                double sum = SqliteDataAccess.LoadFromDbToDouble("SELECT sum(Amount) FROM Expense");
+                textBoxSum.Text = sum.ToString();
+                textBoxCount.Text = displayList.Count().ToString();
+            }
+            else
+            {
+                displayList = SqliteDataAccess.LoadFromDbToList($"select * from Expense where Category = '{category}'");
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = displayList;
 
-            SumAndCountByCategoryFullLoad("Utility", textBoxUtilitySum,textBoxUtilityCount);
-            SumAndCountByCategoryFullLoad("Food", textBoxFoodSum, textBoxFoodCount);
-            SumAndCountByCategoryFullLoad("Transportation", textBoxTranspSum, textBoxTranspCount);
-            SumAndCountByCategoryFullLoad("Not Listed", textBoxNotListSum, textBoxNotListCount);
+                double sum = SqliteDataAccess.LoadFromDbToDouble($"SELECT sum(Amount) FROM Expense where Category = '{category}'");
+                textBoxSum.Text = sum.ToString();
+                textBoxCount.Text = displayList.Count().ToString();
+            }
         }
         private void LoadByMonthAndYear()
         {
             // Load from DB by Month and Year category and load values like sum count etc.
-            month = dateTimePicker.Value.Date.ToString("MMMM");
-            year = dateTimePicker.Value.Date.ToString("yyyy");
-            displayList = SqliteDataAccess.LoadFromDbToList($"select * from Expense where Month = '{month}' and Year = '{year}'");
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = displayList;
+            if (!categorySelected)
+            {
+                month = dateTimePicker.Value.Date.ToString("MMMM");
+                year = dateTimePicker.Value.Date.ToString("yyyy");
+                displayList = SqliteDataAccess.LoadFromDbToList($"select * from Expense where Month = '{month}' and Year = '{year}'");
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = displayList;
 
-            double sum = SqliteDataAccess.LoadFromDbToDouble($"select sum(Amount) from Expense where Month = '{month}' and Year = '{year}'");
-            textBoxSum.Text = sum.ToString();
-            textBoxCount.Text = displayList.Count().ToString();
+                double sum = SqliteDataAccess.LoadFromDbToDouble($"select sum(Amount) from Expense where Month = '{month}' and Year = '{year}'");
+                textBoxSum.Text = sum.ToString();
+                textBoxCount.Text = displayList.Count.ToString();
+            }
+            else
+            {
+                month = dateTimePicker.Value.Date.ToString("MMMM");
+                year = dateTimePicker.Value.Date.ToString("yyyy");
+                displayList = SqliteDataAccess.LoadFromDbToList($"select * from Expense where Category = '{category}' and Month = '{month}' and Year = '{year}'");
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = displayList;
 
-            SumAndCountByCategoryMonthAndYear("Utility",textBoxUtilitySum ,textBoxUtilityCount);
-            SumAndCountByCategoryMonthAndYear("Food", textBoxFoodSum, textBoxFoodCount);
-            SumAndCountByCategoryMonthAndYear("Transportation", textBoxTranspSum, textBoxTranspCount);
-            SumAndCountByCategoryMonthAndYear("Not Listed", textBoxNotListSum, textBoxNotListCount);
-        }
-
-        private void SumAndCountByCategoryMonthAndYear(string category, TextBox textBoxSum, TextBox textBoxCount)
-        {
-            double sumByCategory = SqliteDataAccess.LoadFromDbToDouble($"SELECT sum(Amount) FROM Expense Where Category = '{category}' and Month = '{month}' and Year = '{year}'");
-            textBoxSum.Text = sumByCategory.ToString();
-            textBoxCount.Text = displayList.Count(exp => exp.category.Equals(category)).ToString();
-        }
-        private void SumAndCountByCategoryFullLoad(string category, TextBox textBoxSum,TextBox textBoxCount)
-        {
-            double sumByCategory = SqliteDataAccess.LoadFromDbToDouble($"SELECT sum(Amount) FROM Expense Where Category = '{category}'");
-            textBoxSum.Text = sumByCategory.ToString();
-            textBoxCount.Text = displayList.Count(exp => exp.category.Equals(category)).ToString();
+                double sum = SqliteDataAccess.LoadFromDbToDouble($"select sum(Amount) from Expense where Category = '{category}' and Month = '{month}' and Year = '{year}'");
+                textBoxSum.Text = sum.ToString();
+                textBoxCount.Text = displayList.Count.ToString();
+            }
         }
         #endregion
         #region Deletion and Clear Methods
@@ -134,6 +141,90 @@ namespace Budgeteer
             {
                 MessageBox.Show("Please select row to delete it.", "Delete failed");
             }
+        }
+        #endregion
+        #region Menu Buttons Clicks
+        private void SetCategoryAndArticle(string ctg)
+        {
+            category = ctg;
+            menuBtn.Text = ctg;
+            categorySelected = true;
+        }
+        private void ShowMenu(ContextMenuStrip menu, Button btn)
+        {
+            menu.Show(btn, new Point(0, btn.Height));
+        }
+        private void menuBtn_Click(object sender, EventArgs e)
+        {
+            ShowMenu(categoryMenu, menuBtn);
+        }
+        private void categoryMenuAll_Click(object sender, EventArgs e)
+        {
+            categorySelected = false;
+            menuBtn.Text = "All";
+        }
+        private void categoryMenuUtilBtn_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Utility");
+        }
+        private void categoryMenuFood_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Food");
+        }
+
+        private void categoryMenuTransportationBtn_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Transport");
+        }
+
+        private void categoryMenuKitchenProducts_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Kitchen products");
+        }
+
+        private void categoryMenuBodyFaceCare_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Body Hair Face care");
+        }
+
+        private void categoryMenuWardrobe_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Wardrobe");
+        }
+
+        private void categoryMenuLaundryProducts_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Laundry products");
+        }
+
+        private void categoryMenuBabyCare_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Baby");
+        }
+
+        private void categoryMenuKids_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Kids");
+        }
+
+        private void categoryMenuPets_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Pets");
+        }
+
+        private void categoryMenuGarden_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Garden");
+        }
+
+        private void categoryMenuPharmacy_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Pharmacy");
+        }
+
+        private void categoryMenuNotListedBtn_Click_1(object sender, EventArgs e)
+        {
+            SetCategoryAndArticle("Not Listed");
         }
         #endregion
     }
